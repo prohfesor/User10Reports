@@ -327,6 +327,8 @@ h1 {
   font-size: 13px;
   color: #333;
   vertical-align: middle;
+  display: inline-block;
+  margin: -2px 0 0;
 }
 /*----------------------------------------------------------------------------------*/
 /*------------------------------------> Sidebar <-----------------------------------*/
@@ -454,7 +456,7 @@ h1 {
   width: 100%;
   cursor: pointer;
 }
-.side-block .form-block label {
+.side-block .form-block label, .side-block .form-block .chars {
   color: #999;
   font-size: 9px;
   text-transform: uppercase;
@@ -465,11 +467,14 @@ h1 {
   border: 1px solid #E4E4E4;
   background: #F2F2F2;
 }
-.side-block .form-block .input-block input {
+.side-block .form-block .input-block input, .side-block .form-block .input-block textarea {
   border: 0;
   width: 260px;
   background: none;
   padding: 13px 9px 12px;
+}
+.side-block .form-block .input-block.big-font input {
+  font-size: 40px;
 }
 .side-block .form-block .date input {
   width: 220px;
@@ -483,6 +488,87 @@ h1 {
 }
 
 
+.side-block .form-block .upload-link {
+  color: #00CC99;
+}
+.side-block .form-block .btn-browse {
+  background: #E4E4E4;
+  color: #999;
+  float: right;
+  margin: 3px 3px 3px 0;
+  font-size: 10px;
+  font-weight: bold;
+  padding: 11px 18px 10px;
+  cursor: pointer;
+}
+.side-block .form-block .browse input {
+  width: 175px;
+}
+.side-block .form-block .input-caption, .side-block .form-block .input-caption label {
+  overflow: hidden;
+}
+.side-block .form-block .chars {
+  float: right;
+}
+.side-block .form-block .chars span {
+  color: #333;
+}
+.side-block .form-block .input-block textarea {
+  resize: none;
+  height: 60px;
+}
+
+
+.side-block .form-block .square li {
+  list-style: square inside;  
+}
+.side-block .form-block .square li.active, .side-block .form-block .digit li.active {
+  background: #FFF;
+}
+.side-block .form-block .square li, .side-block .form-block .digit li {
+  color: #CCC;
+  font-size: 28px;
+  line-height: 20px;
+  padding: 6px 0 6px 13px;
+  border-bottom: 1px solid #E4E4E4;
+}
+.side-block .form-block .square li:last-child, .side-block .form-block .digit li:last-child {
+  border-bottom: 0;
+}
+.side-block .form-block .square span, .side-block .form-block .digit span {
+  color: #333;
+  font-size: 13px;
+  vertical-align: middle;
+  display: inline-block;
+  margin: -3px 0 0 5px;
+  padding: 3px 0 3px 11px;
+  border-left: 1px dotted #CCC;
+}
+
+
+
+.side-block .form-block .digit {
+  counter-reset: item;
+  list-style-type: none;
+}
+.side-block .form-block .digit li:before { 
+  content: counter(item) "  "; 
+  counter-increment: item 
+}
+.side-block .form-block .digit li {
+  display: block;
+  list-style: decimal inside;
+}
+
+
+
+
+
+.side-block .form-block .add-item span {
+  font-style: italic;
+  color: #999;
+}
+
 .side-block .form-block .input-block input::-webkit-input-placeholder {
   font-style: italic;
 }
@@ -492,4 +578,16 @@ h1 {
 .side-block .form-block .input-block input:-ms-input-placeholder {
   font-style: italic;
 }
+
+
+
+.side-block .delete-data {
+  text-align: center;
+}
+.side-block .delete-data a {
+  color: #F33;
+  font-size: 9px;
+}
+
+
 
