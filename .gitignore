@@ -3,4 +3,4 @@
 .buildpath
 .project
 
-/cache/
+/cache/smarty/templates/*.php

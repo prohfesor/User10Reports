@@ -1,0 +1,10 @@
+#Don't show directory listings for URLs which map to a directory.
+ Options -Indexes
+
+#Human-readable URLs
+ RewriteEngine on
+ RewriteBase /
+ RewriteCond %{REQUEST_FILENAME} !-f
+ RewriteCond %{REQUEST_URI} !'/'
+ RewriteRule ^(.*)/$ index.php?action=$1&%{QUERY_STRING} [L]
+ RewriteRule ^(.*).html$ index.php?action=$1&%{QUERY_STRING} [L]
