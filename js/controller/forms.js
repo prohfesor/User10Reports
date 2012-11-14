@@ -2,28 +2,61 @@
 (function() {
 
   jQuery(function($) {
-    window.showWidgetForm = function(form) {
+    $.fn.showForm = function() {
       $('#forms > *').hide();
-      return $('#forms > ' + form).show();
+      return this.show();
+    };
+    $.fn.setFormData = function(data) {
+      var name, value;
+      for (name in data) {
+        value = data[name];
+        this.find('*[name=' + name + ']').val(value);
+      }
+      return this;
+    };
+    $.fn.getFormData = function() {
+      var data;
+      data = {};
+      this.find(':input').each(function() {
+        if ((this.name != null) && this.name.length > 0) {
+          return data[this.name] = this.value;
+        }
+      });
+      return data;
+    };
+    $.fn.setFormModel = function(model) {
+      return this.data('model', model);
+    };
+    $.fn.getFormModel = function() {
+      return this.data('model');
+    };
+    $.fn.clearForm = function() {
+      this.find('input:text, textarea, select').val('');
+      return this.data('model', null);
     };
     $('#forms form').submit(function() {
-      var $this, addBtn, className, coord, newAddBtn, view, widget;
+      var $this, addBtn, className, coord, data, newAddBtn, view, widget;
       $this = $(this);
-      className = $this.attr('id').replace('-form', '');
-      addBtn = $('#add-widget');
-      newAddBtn = addBtn.clone();
-      coord = addBtn.coords().grid;
-      widget = new widgetMap[className].model();
-      view = new widgetMap[className].view(widget);
-      addBtn.hide();
-      Editor.remove_widget(addBtn, function() {
-        Editor.add_widget(view.getHtml(), 1, 1, coord.col, coord.row);
-        return Editor.add_widget(newAddBtn, 1, 1, coord.col + 1, coord.row);
-      });
+      data = $this.getFormData();
+      if ($this.getFormModel() === null) {
+        className = $this.attr('id').replace('-form', '');
+        widget = new widgetMap[className].model(data);
+        view = new widgetMap[className].view(widget);
+        $this.setFormModel(widget);
+        addBtn = $('#add-widget');
+        coord = addBtn.coords().grid;
+        newAddBtn = addBtn.hide().clone();
+        Editor.remove_widget(addBtn, function() {
+          Editor.add_widget(view.getHtml(), 1, 1, coord.col, coord.row);
+          return Editor.add_widget(newAddBtn, 1, 1, coord.col + 1, coord.row);
+        });
+      } else {
+        $this.getFormModel().set(data);
+      }
       return false;
     });
     return $('#forms form .cancel').click(function() {
-      return showWidgetForm('#types-form');
+      return $('#types-form').showForm();
     });
   });
 

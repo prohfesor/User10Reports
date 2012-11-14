@@ -6,7 +6,7 @@
       return $('#forms').toggle();
     });
     return $('#add-widget-tab').click(function() {
-      return showWidgetForm('#types-form');
+      return $('#types-form').showForm();
     });
   });
 
