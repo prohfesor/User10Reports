@@ -8,9 +8,9 @@
     <li class="report-item">
         <span>{$report->name}</span>
         <br>
-        <span>{$report->date_from|date_format:"%b, %e, %Y"} - {$report->date_to|date_format:"%b, %e, %Y"}</span>
+        <span class="date">{$report->date_from|date_format:"%b, %e, %Y"} - {$report->date_to|date_format:"%b, %e, %Y"}</span>
         <br>
-        <a href="/edit.html">View</a>
+        <a href="/view/{$report->id}/">View</a>
         <br><br>
     </li>
 {foreachelse}

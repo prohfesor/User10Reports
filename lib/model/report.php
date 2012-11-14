@@ -30,4 +30,17 @@ class Report
         return $result;
     }
 
+
+    public static function find($id)
+    {
+        $db = flyDb::getInstance();
+        $q = "SELECT * FROM `report` WHERE id=".(int)$id;
+        $result = $db->fetch_row($q);
+        if($result){
+            $result->user = User::find($result->user_id);
+            $result->blocks = Blocks::getReport($id);
+        }
+        return $result;
+    }
+
 }

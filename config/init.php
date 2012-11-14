@@ -23,3 +23,4 @@ $smarty->cache_dir = DIR_ROOT."/cache/smarty/";
 //models
 require_once('lib/model/report.php');
 require_once('lib/model/user.php');
+require_once('lib/model/blocks.php');
