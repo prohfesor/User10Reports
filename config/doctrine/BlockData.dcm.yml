@@ -1,0 +1,25 @@
+BlockData:
+    type: entity
+    table: block_data
+    fields:
+        id:
+            id: true
+            type: integer
+            unsigned: false
+            nullable: false
+            generator:
+                strategy: IDENTITY
+        blockId:
+            type: integer
+            unsigned: false
+            nullable: false
+            column: block_id
+        key:
+            type: string
+            length: 128
+            fixed: false
+            nullable: false
+        value:
+            type: text
+            nullable: false
+    lifecycleCallbacks: {  }
