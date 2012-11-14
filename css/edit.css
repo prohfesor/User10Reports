@@ -1,0 +1,43 @@
+.wrap {
+  overflow: hidden; }
+
+#editor-wrap {
+  float: left;
+  width: 600px;
+  background-color: #e5e5e5; }
+
+#editor li {
+  border: 1px solid #afafaf; }
+
+#forms {
+  float: left;
+  width: 300px;
+  background-color: #dedede; }
+  #forms > * {
+    border: 1px solid #afafaf;
+    display: none; }
+
+#types-form li:hover {
+  background-color: #cccccc; }
+
+#tabs {
+  float: left;
+  width: 50px; }
+  #tabs li {
+    width: 50px;
+    height: 50px;
+    background-color: #afafaf;
+    border: 1px solid #e5e5e5; }
+    #tabs li.active {
+      background-color: #d6d6d6; }
+    #tabs li:hover {
+      background-color: #cccccc; }
+
+#add-widget {
+  text-align: center;
+  font-size: 20px; }
+  #add-widget button {
+    margin-top: 100px; }
+  #add-widget ul {
+    display: none;
+    position: relative; }
