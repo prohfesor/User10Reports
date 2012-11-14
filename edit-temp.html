@@ -22,6 +22,7 @@
     <script src="/js/controller/tabs.js"></script>
     <script src="/js/controller/types.js"></script>
     <script src="/js/controller/forms.js"></script>
+    <script src="/js/controller/list-form.js"></script>
     <script src="/js/controller/app.js"></script>
 </head>
 <body>
@@ -73,12 +74,18 @@
                 <label>List name:</label>
                 <input type="text" name="title">
             </p>
-            <label>List name</label>
-            <ul>
-                <li>Direct</li>
-                <li>Search</li>
-                <li>Social</li>
+            <label>List</label>
+            <ul id="form-list" data-max="5">
+                <li><input type="text" name="list[]"></li>
             </ul>
+            <div><input id="add-list-item" type="text" placeholder="Add item"></div>
+            <p>
+                <label>List type:</label>
+                <select name="list_type">
+                    <option value="bullet">Bullet</option>
+                    <option value="numeric">Numeric</option>
+                </select>
+            </p>
             <input type="submit" value="Save"><input type="button" value="Cancel" class="cancel">
         </form>
 

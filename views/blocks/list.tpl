@@ -1,10 +1,10 @@
-<li class="with-list">
-    <span class="area">Top traffic sources</span>
-    <ul class="square">
-        <li><span>Direct</span></li>
-        <li><span>Organic Search</span></li>
-        <li><span>Social Media</span></li>
-        <li><span>Banner Campaigns</span></li>
-        <li><span>Commercials</span></li>
+<li class="with-list" title="{$block->data['source']}">
+    <span class="area">{$block->data['name']}</span>
+    <ul class="{$block->data['list']|default:"square"}">
+        {if !empty($block->data['line1'])}<li><span>{$block->data['line1']}</span></li>{/if}
+        {if !empty($block->data['line2'])}<li><span>{$block->data['line2']}</span></li>{/if}
+        {if !empty($block->data['line3'])}<li><span>{$block->data['line3']}</span></li>{/if}
+        {if !empty($block->data['line4'])}<li><span>{$block->data['line4']}</span></li>{/if}
+        {if !empty($block->data['line5'])}<li><span>{$block->data['line5']}</span></li>{/if}
     </ul>
 </li>

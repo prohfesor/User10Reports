@@ -18,8 +18,18 @@
       var data;
       data = {};
       this.find(':input').each(function() {
+        var name;
         if ((this.name != null) && this.name.length > 0) {
-          return data[this.name] = this.value;
+          if (this.name.indexOf('[]') > 0) {
+            name = this.name.replace('[]', '');
+            if (name in data) {
+              return data[name].push(this.value);
+            } else {
+              return data[name] = [this.value];
+            }
+          } else {
+            return data[this.name] = this.value;
+          }
         }
       });
       return data;
