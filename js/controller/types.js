@@ -6,7 +6,7 @@
       var $this, className;
       $this = $(this);
       className = $this.data('class');
-      return showWidgetForm('#' + className + '-form');
+      return $('#' + className + '-form').clearForm().showForm();
     });
   });
 

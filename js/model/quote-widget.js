@@ -15,7 +15,9 @@
       id: 0,
       report_id: 0,
       row: 1,
-      col: 1
+      col: 1,
+      title: '',
+      text: ''
     };
 
     return QuoteWidget;
@@ -32,6 +34,22 @@
       }
 
       QuoteView.prototype.html = $('#quote-tpl').html();
+
+      QuoteView.prototype.template = {
+        '': {
+          on: {
+            'click': function() {
+              return $('#quote-form').setFormData(this.get()).setFormModel(this).showForm();
+            }
+          }
+        },
+        'p': {
+          html: '@text'
+        },
+        '.area': {
+          html: '@title'
+        }
+      };
 
       return QuoteView;
 

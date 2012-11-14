@@ -221,7 +221,7 @@ h1 {
 }
 .edit-blocks {
   background: #E4E4E4;
-  border-left: 1px solid #F2F2F2;
+  /*border-left: 1px solid #F2F2F2;*/
   border-bottom: 1px solid #F2F2F2;
   overflow: hidden;
 }
@@ -259,7 +259,17 @@ h1 {
   background-image: linear-gradient(right top, #669A00 0%, #66CC00 40%);  
 }
 
-.edit-blocks .red .block-caption, .edit-blocks .green .block-caption {
+.edit-blocks .yellow {
+  background-color: #FFDB4A;
+  background-image: -webkit-gradient(linear, right top, left bottom, from(0, #F9C700), to(0.4, #FFDB4A));
+  background-image: -webkit-linear-gradient(right top, #F9C700 0%, #FFDB4A 40%);
+  background-image: -moz-linear-gradient(right top, #F9C700 0%, #FFDB4A 40%);
+  background-image: -ms-linear-gradient(right top, #F9C700 0%, #FFDB4A 40%);
+  background-image: -o-linear-gradient(right top, #F9C700 0%, #FFDB4A 40%);
+  background-image: linear-gradient(right top, #F9C700 0%, #FFDB4A 40%);  
+}
+
+.edit-blocks .red .block-caption, .edit-blocks .green .block-caption, .edit-blocks .yellow .block-caption {
   color: #FFF;
 }
 .edit-blocks .red .area {
@@ -267,6 +277,9 @@ h1 {
 }
 .edit-blocks .green .area {
   color: #669900;
+}
+.edit-blocks .yellow .area {
+  color: #9D7A00;
 }
 
 .edit-blocks .with-image p {
@@ -315,3 +328,168 @@ h1 {
   color: #333;
   vertical-align: middle;
 }
+/*----------------------------------------------------------------------------------*/
+/*------------------------------------> Sidebar <-----------------------------------*/
+/*----------------------------------------------------------------------------------*/
+.sidebar {
+  float: right;
+  width: 360px;
+  padding: 42px 0 0;
+}
+.sidebar .side-caption {
+  background-color: #D7D7D7;
+  background-image: -webkit-gradient(linear, left top, right top, from(0, #C9C9C9), to(0.3, #D7D7D7));
+  background-image: -webkit-linear-gradient(left, #C9C9C9 0%, #D7D7D7 30%);
+  background-image: -moz-linear-gradient(left, #C9C9C9 0%, #D7D7D7 30%);
+  background-image: -ms-linear-gradient(left, #C9C9C9 0%, #D7D7D7 30%);
+  background-image: -o-linear-gradient(left, #C9C9C9 0%, #D7D7D7 30%);
+  background-image: linear-gradient(left, #C9C9C9 0%, #D7D7D7 30%);  
+
+  border: 1px solid #F2F2F2;
+  border-right: 0;
+  padding: 4px 0;
+}
+.sidebar .side-caption h2 {
+  border-right: 1px solid #BCBCBC;
+  font-size: 13px;
+  font-weight: normal;
+  color: #999;
+  padding: 9px 10px 7px;
+}
+
+.sidebar .buttons-block,
+.sidebar .buttons-block .first,
+.sidebar .buttons-block .button a,
+.side-block .form-block {
+  border-style: solid;
+  border-color: #F2F2F2;
+}
+
+
+.sidebar .buttons-block {
+  width: 60px;
+  float: right;
+  border-width: 0 1px 0 0;
+}
+.sidebar .buttons-block .first {
+  background: #D7D7D7;
+  padding: 4px 0;
+  
+  border-width: 1px 0;
+}
+.sidebar .buttons-block .close a {
+  background: url(../img/close-blk.png) 20px 9px no-repeat;   
+}
+.sidebar .buttons-block .switch a {
+  background: url(../img/arrow-right-blk.png) 21px 8px no-repeat;   
+}
+.sidebar .buttons-block .switch.active a {
+  background: url(../img/arrow-left-blk.png) 20px 8px no-repeat;   
+}
+
+.sidebar .buttons-block .first a {
+  display: block;
+  border-left: 1px solid #E4E4E4;
+  height: 31px;
+}
+.sidebar .buttons-block .button {
+  background-color: #D7D7D7;
+  background-image: -webkit-gradient(linear, left top, right top, from(0, #BFBFBF), to(0.3, #D7D7D7));
+  background-image: -webkit-linear-gradient(left, #BFBFBF 0%, #D7D7D7 30%);
+  background-image: -moz-linear-gradient(left, #BFBFBF 0%, #D7D7D7 30%);
+  background-image: -ms-linear-gradient(left, #BFBFBF 0%, #D7D7D7 30%);
+  background-image: -o-linear-gradient(left, #BFBFBF 0%, #D7D7D7 30%);
+  background-image: linear-gradient(left, #BFBFBF 0%, #D7D7D7 30%);
+  
+  text-align: center;
+}
+.sidebar .buttons-block .button.active, .sidebar .buttons-block .button:hover {
+  background-color: #FFF;
+  background-image: -webkit-gradient(linear, left top, right top, from(0, #E7E7E7), to(0.3, #FFFFFF));
+  background-image: -webkit-linear-gradient(left, #E7E7E7 0%, #FFFFFF 30%);
+  background-image: -moz-linear-gradient(left, #E7E7E7 0%, #FFFFFF 30%);
+  background-image: -ms-linear-gradient(left, #E7E7E7 0%, #FFFFFF 30%);
+  background-image: -o-linear-gradient(left, #E7E7E7 0%, #FFFFFF 30%);
+  background-image: linear-gradient(left, #E7E7E7 0%, #FFFFFF 30%);
+}
+.sidebar .buttons-block .button a {
+  font-size: 9px;
+  color: #999;
+  text-decoration: none;
+  text-transform: uppercase;
+  height: 45px;
+  display: block;
+  border-width: 0 0 1px;
+  padding: 15px 0 0;
+}
+.sidebar .buttons-block .button.about a {
+  background: url(../img/gear-blk.png) 22px 32px no-repeat;
+}
+.sidebar .buttons-block .button.add a {
+  background: url(../img/plus-blk.png) 22px 32px no-repeat;
+}
+.sidebar .buttons-block .button.share a {
+  background: url(../img/users-blk.png) 22px 32px no-repeat;
+}
+.sidebar .buttons-block .button.edit a {
+  background: url(../img/pencil-blk.png) 22px 32px no-repeat;
+}
+
+.side-block {
+  overflow: hidden;
+}
+.side-block .form-block {
+  border-width: 0 1px 1px 0;
+  background: #FBFBFB;
+  padding: 0 9px 50px;
+}
+.side-block .form-block .btn-green {
+  font-size: 13px;
+  font-weight: bold;
+  background: #00CC99;
+  padding: 12px 0 13px;
+  margin: 20px 0 0;
+  text-align: center;
+  display: block;
+  width: 100%;
+  cursor: pointer;
+}
+.side-block .form-block label {
+  color: #999;
+  font-size: 9px;
+  text-transform: uppercase;
+  display: block;
+  padding: 13px 0 5px;
+}
+.side-block .form-block .input-block {
+  border: 1px solid #E4E4E4;
+  background: #F2F2F2;
+}
+.side-block .form-block .input-block input {
+  border: 0;
+  width: 260px;
+  background: none;
+  padding: 13px 9px 12px;
+}
+.side-block .form-block .date input {
+  width: 220px;
+}
+.side-block .form-block .date .icon {
+  display: block;
+  width: 40px;
+  height: 40px;
+  float: right;
+  background: url(../img/calendar-blk.png) 12px 12px no-repeat;
+}
+
+
+.side-block .form-block .input-block input::-webkit-input-placeholder {
+  font-style: italic;
+}
+.side-block .form-block .input-block input:-moz-placeholder {
+  font-style: italic;
+}
+.side-block .form-block .input-block input:-ms-input-placeholder {
+  font-style: italic;
+}
+

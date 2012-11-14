@@ -15,7 +15,9 @@
       id: 0,
       report_id: 0,
       row: 1,
-      col: 1
+      col: 1,
+      text: '',
+      image: ''
     };
 
     return ImageWidget;
@@ -32,6 +34,24 @@
       }
 
       ImageView.prototype.html = $('#image-tpl').html();
+
+      ImageView.prototype.template = {
+        '': {
+          on: {
+            'click': function() {
+              return $('#image-form').setFormData(this.get()).data('model', this).showForm();
+            }
+          },
+          onModel: {
+            '@image': function(li, url) {
+              return li.css('background-image', url);
+            }
+          }
+        },
+        'p': {
+          html: '@text'
+        }
+      };
 
       return ImageView;
 
