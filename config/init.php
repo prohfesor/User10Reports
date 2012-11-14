@@ -19,3 +19,7 @@ $smarty->template_dir = DIR_ROOT."/views/";
 $smarty->compile_dir = DIR_ROOT."/cache/smarty/templates/";
 $smarty->config_dir = DIR_ROOT.'/configs/';
 $smarty->cache_dir = DIR_ROOT."/cache/smarty/";
+
+//models
+require_once('lib/model/report.php');
+require_once('lib/model/user.php');

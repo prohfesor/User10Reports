@@ -1,13 +1,10 @@
 <!doctype html>
-<!-- paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/ -->
 <!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
 <!--[if IE 7]>    <html class="no-js lt-ie9 lt-ie8" lang="en"> <![endif]-->
 <!--[if IE 8]>    <html class="no-js lt-ie9" lang="en"> <![endif]-->
-<!-- Consider adding a manifest.appcache: h5bp.com/d/Offline -->
 <!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
 <head>
     <meta charset="utf-8">
-
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <title>Likely Reports</title>
     <meta name="description" content="">
@@ -19,9 +16,24 @@
 
 <!--[if lt IE 7]><p class=chromeframe>Your browser is <em>ancient!</em> <a href="http://browsehappy.com/">Upgrade to a different browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to experience this site.</p><![endif]-->
 
-<header>
-    <span class="logo">LIKELY REPORTS</span>
-</header>
-
 <div role="main" id="wrap">
 
+
+    <div class="wrapper">
+        <div class="header">
+            <!--<a href="#" class="logo"><img src="img/logo.png" alt="Logo" /></a>-->
+            <ul>
+                <li class="first"><a href="/" class="logo"><img src="img/logo.png" alt="Logo" /></a></li>
+                <li><a href="/" class="icon reports"></a></li>
+                <li><a href="/add" class="icon add"></a></li>
+            </ul>
+        </div> <!-- /Header -->
+
+        <div class="content">
+            <div class="wrap edit-page">
+                <div class="sidebar">
+
+                </div>
+
+
+                <div class="main">

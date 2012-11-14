@@ -1,10 +1,13 @@
+
+<div class="footer">
+    <span class="copy">&copy; 2012 Likely Products</span>
+    {mailto address="validate@user10.com" encode="javascript_charcode" extra='class="mail"'}
 </div>
 
-<footer>
-    {mailto address="validate@user10.com" encode="javascript_charcode"}
-
-    &copy Likely Products
-</footer>
+</div>
+</div>
+</div> <!-- /Content -->
+</div> <!-- /Wrapper -->
 
 
 <!-- JavaScript at the bottom for fast page loading -->
@@ -15,9 +18,10 @@
     {literal}
     var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];
     (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
-    g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
-    s.parentNode.insertBefore(g,s)}(document,'script'));
+        g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
+        s.parentNode.insertBefore(g,s)}(document,'script'));
     {/literal}
 </script>
+
 </body>
 </html>
