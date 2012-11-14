@@ -7,7 +7,7 @@
       widget_base_dimensions: [200, 200]
     });
     window.Editor = $('.gridster > ul').gridster().data('gridster');
-    showWidgetForm('#types-form');
+    $('#types-form').showForm();
     return window.widgetMap = {
       custom: {
         model: CustomWidget,

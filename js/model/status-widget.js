@@ -15,7 +15,9 @@
       id: 0,
       report_id: 0,
       row: 1,
-      col: 1
+      col: 1,
+      title: '',
+      status: ''
     };
 
     return StatusWidget;
@@ -32,6 +34,22 @@
       }
 
       StatusView.prototype.html = $('#status-tpl').html();
+
+      StatusView.prototype.template = {
+        '': {
+          on: {
+            'click': function() {
+              return $('#status-form').setFormData(this.get()).data('model', this).showForm();
+            }
+          }
+        },
+        '.block-caption': {
+          html: '@title'
+        },
+        '.area': {
+          html: '@status'
+        }
+      };
 
       return StatusView;
 

@@ -15,7 +15,9 @@
       id: 0,
       report_id: 0,
       row: 1,
-      col: 1
+      col: 1,
+      title: '',
+      list: ['Direct', 'Direct2']
     };
 
     return ListWidget;
@@ -32,6 +34,31 @@
       }
 
       ListView.prototype.html = $('#list-tpl').html();
+
+      ListView.prototype.template = {
+        '': {
+          on: {
+            'click': function() {
+              return $('#list-form').setFormData(this.get()).setFormModel(this).showForm();
+            }
+          }
+        },
+        '.area': {
+          html: '@title'
+        },
+        '.square': {
+          each: {
+            dataField: 'list',
+            template: {
+              'span': {
+                html: function() {
+                  return this.valueOf();
+                }
+              }
+            }
+          }
+        }
+      };
 
       return ListView;
 

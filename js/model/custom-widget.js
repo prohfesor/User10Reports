@@ -15,7 +15,9 @@
       id: 0,
       report_id: 0,
       row: 1,
-      col: 1
+      col: 1,
+      title: '',
+      data: ''
     };
 
     return CustomWidget;
@@ -32,6 +34,22 @@
       }
 
       CustomView.prototype.html = $('#custom-tpl').html();
+
+      CustomView.prototype.template = {
+        '': {
+          on: {
+            'click': function() {
+              return $('#custom-form').setFormData(this.get()).setFormModel(this).showForm();
+            }
+          }
+        },
+        '.block-caption': {
+          html: '@data'
+        },
+        '.area': {
+          html: '@title'
+        }
+      };
 
       return CustomView;
 

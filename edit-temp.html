@@ -30,7 +30,7 @@
     <div class="gridster" id="editor-wrap">
         <ul id="editor">
             <li id="add-widget" data-row="1" data-col="1" data-sizex="1" data-sizey="1">
-                <button type="button">+</button>
+                <span class="add">+</span>
             </li>
         </ul>
     </div>
@@ -119,34 +119,34 @@
 </div>
 
 <script type="text/html" id="custom-tpl">
-    <li class="custom widget">
-        <p>some text</p>
-        <p>some text</p>
+    <li>
+        <span class="block-caption">Behind</span>
+        <span class="area">Project schedule</span>
     </li>
 </script>
 <script type="text/html" id="image-tpl">
-    <li class="image widget">
-        <p>some text</p>
+    <li class="with-image">
+        <p>som text</p>
     </li>
 </script>
 <script type="text/html" id="list-tpl">
-    <li class="list widget">
-        <p>title</p>
-        <ul>
-            <li>some text</li>
+    <li class="with-list">
+        <span class="area">Top traffic sources</span>
+        <ul class="square">
+            <li><span>Direct</span></li>
         </ul>
     </li>
 </script>
 <script type="text/html" id="quote-tpl">
-    <li class="quote widget">
-        <p>main text</p>
-        <p>second text</p>
+    <li>
+        <p>some text</p>
+        <span class="area">John Doe, Beta tester</span>
     </li>
 </script>
 <script type="text/html" id="status-tpl">
-    <li class="status widget">
-        <p>some text</p>
-        <p>status</p>
+    <li class="red">
+        <span class="block-caption">Behind</span>
+        <span class="area">Project schedule</span>
     </li>
 </script>
 

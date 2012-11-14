@@ -3,7 +3,7 @@
 
   jQuery(function($) {
     return $('body').on('click', '#add-widget', function() {
-      return showWidgetForm('#types-form');
+      return $('#types-form').showForm();
     });
   });
 
