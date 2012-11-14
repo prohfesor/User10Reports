@@ -25,7 +25,11 @@ class Blocks
         $q = "SELECT * FROM `block` WHERE report_id=".(int)$id." ORDER BY position";
         $result = $db->fetch_all_rows($q);
         if($result){
-
+            foreach($result as $k=>$block){
+                $q = "SELECT `key`, `value` FROM block_data WHERE block_id=".(int)$block->id." ORDER BY `key`";
+                $block->data = $db->fetch_key_value($q);
+                $result[$k] = $block;
+            }
         }
         return $result;
     }
