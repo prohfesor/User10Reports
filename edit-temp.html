@@ -8,6 +8,7 @@
 
     <script src="http://code.jquery.com/jquery-1.8.2.min.js"></script>
     <script src="/js/lib/jquery.gridster.min.js"></script>
+    <script src="/js/lib/jquery.form.js"></script>
 
     <script src="/js/lib/js-model.js"></script>
     <script src="/js/lib/js-view.js"></script>
@@ -23,6 +24,7 @@
     <script src="/js/controller/types.js"></script>
     <script src="/js/controller/forms.js"></script>
     <script src="/js/controller/list-form.js"></script>
+    <script src="/js/controller/image-form.js"></script>
     <script src="/js/controller/app.js"></script>
 </head>
 <body>
@@ -57,10 +59,13 @@
             <input type="button" value="Cancel" class="cancel">
         </form>
 
-        <form action="" id="image-form">
+        <form action="" id="image-form" enctype="multipart/form-data">
             <p>
                 <label>Image:</label>
-                <input type="text" name="image">
+                <input type="text" name="url">
+                <span class="upload">
+                    <input type="file" name="image">
+                </span>
             </p>
             <p>
                 <label>Caption: </label>
