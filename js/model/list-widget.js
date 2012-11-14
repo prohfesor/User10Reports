@@ -17,7 +17,8 @@
       row: 1,
       col: 1,
       title: '',
-      list: ['Direct', 'Direct2']
+      list: ['Direct', 'Direct2'],
+      list_type: 'bullet'
     };
 
     return ListWidget;
@@ -40,6 +41,11 @@
           on: {
             'click': function() {
               return $('#list-form').setFormData(this.get()).setFormModel(this).showForm();
+            }
+          },
+          onModel: {
+            '@list_type': function(li, type) {
+              return li.removeClass('bullet numeric').addClass(type);
             }
           }
         },
