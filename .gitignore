@@ -4,3 +4,4 @@
 .project
 
 /cache/smarty/templates/*.php
+/config/config.php
