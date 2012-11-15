@@ -552,7 +552,9 @@ h1 {
   padding: 6px 0 6px 13px;
   border-bottom: 1px solid #E4E4E4;
 }
-.side-block .form-block .square li:last-child, .side-block .form-block .digit li:last-child {
+.side-block .form-block .square li:last-child,
+.side-block .form-block .digit li:last-child,
+.side-block .widget-type li:last-child {
   border-bottom: 0;
 }
 .side-block .form-block .square .text, .side-block .form-block .digit .text {
@@ -606,16 +608,6 @@ h1 {
 }
 
 
-.side-block .form-block .square {
-}
-.side-block .form-block .square li:before { 
-}
-
-
-
-
-
-
 .side-block .form-block .input-block input::-webkit-input-placeholder,
 .side-block .square input::-webkit-input-placeholder,
 .side-block .digit input::-webkit-input-placeholder {
@@ -643,4 +635,34 @@ h1 {
 }
 
 
-
+.side-block .form-block.widget-type {
+  padding: 0;
+}
+.side-block .widget-type li {
+  overflow: hidden;
+  padding: 9px;
+  border-bottom: 1px solid #E4E4E4;
+}
+.side-block .widget-type .photo-block {
+  width: 31px;
+  height: 31px;
+  float: left;
+  background: #CCC;
+  margin: 0 11px 0 0;
+}
+.side-block .widget-type .info-block {
+  overflow: hidden;
+}
+.side-block .widget-type span {
+  display: block;
+  padding: 1px 0 0;
+}
+.side-block .widget-type .name {
+  color: #64CC99;
+  font-size: 13px;
+  font-weight: bold;
+}
+.side-block .widget-type .hint {
+  font-size: 9px;
+  color: #999;
+}
