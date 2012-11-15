@@ -371,8 +371,12 @@ h1 {
 
 .sidebar .buttons-block {
   width: 60px;
-  float: right;
+  float: left;
   border-width: 0 1px 0 0;
+}
+.sidebar .forms-wrap {
+  float: left;
+  width: 299px;
 }
 .sidebar .buttons-block .first {
   background: #D7D7D7;
@@ -502,6 +506,19 @@ h1 {
   padding: 11px 18px 10px;
   cursor: pointer;
 }
+.side-block .form-block .browse {
+  overflow: hidden;
+  position: relative;
+}
+.side-block .form-block .browse .file-input {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 300px;
+  height: 50px;
+  opacity: 0;
+  cursor: pointer;
+}
 .side-block .form-block .browse input {
   width: 175px;
 }
@@ -522,13 +539,13 @@ h1 {
 
 .side-block .form-block .square li {
   list-style: square inside;  
+  font-size: 28px;
 }
 .side-block .form-block .square li.active, .side-block .form-block .digit li.active {
   background: #FFF;
 }
 .side-block .form-block .square li, .side-block .form-block .digit li {
   color: #CCC;
-  font-size: 28px;
   line-height: 20px;
   padding: 6px 0 6px 13px;
   border-bottom: 1px solid #E4E4E4;
@@ -548,17 +565,28 @@ h1 {
 .side-block .form-block .colored li {
   font-size: 42px;
 }
-.side-block .form-block .square .red {
-  color: #F33;
-}
-.side-block .form-block .square .green {
-  color: #6C0;
-}
-.side-block .form-block .square .yellow {
-  color: #FC0;
-}
+.side-block .form-block .colored .red     { color: #F33; }
+.side-block .form-block .colored .green   { color: #6C0; }
+.side-block .form-block .colored .yellow  { color: #FC0; }
 
+.side-block .form-block .colored li span    { color: #333; }
 
+.side-block .form-block .marked-list input.text {
+  width: 225px;
+}
+.side-block .form-block .choose-type .radio {
+  float: right;
+  margin: 5px 10px 0 0;
+}
+.side-block .form-block .choose-type li span {
+  color: #AAA;
+}
+.side-block .form-block .choose-type .square span {
+  margin-left: -3px;
+}
+.side-block .form-block .choose-type .square {
+  border-bottom: 1px solid #E4E4E4;
+}
 
 .side-block .form-block .digit {
   counter-reset: item;
@@ -571,6 +599,7 @@ h1 {
 .side-block .form-block .digit li {
   display: block;
   list-style: decimal inside;
+  font-size: 22px;
 }
 
 
