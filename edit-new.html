@@ -56,45 +56,35 @@
     <div class="form-block side-list">
         <ul class="widget-type">
             <li data-class="custom">
-                <div class="photo-block">
-                    <img src="/img/file-blk.png"/>
-                </div>
+                <div class="photo-block custom"></div>
                 <div class="info-block">
                     <span class="name">Custom</span>
                     <span class="hint">Numbers, dollars, percentages-whatever you want</span>
                 </div>
             </li>
             <li data-class="image">
-                <div class="photo-block">
-                    <img src="/img/camera-blk.png"/>
-                </div>
+                <div class="photo-block image"></div>
                 <div class="info-block">
                     <span class="name">Image</span>
                     <span class="hint">Add a picture and a caption, nice and easy</span>
                 </div>
             </li>
             <li data-class="list">
-                <div class="photo-block">
-                    <img src="/img/img-list-blk.png"/>
-                </div>
+                <div class="photo-block list"></div>
                 <div class="info-block">
                     <span class="name">List</span>
                     <span class="hint">Up to five bits of text, bulleted or numbered</span>
                 </div>
             </li>
             <li data-class="quote">
-                <div class="photo-block">
-                    <img src="/img/chat2-blk.png"/>
-                </div>
+                <div class="photo-block quote"></div>
                 <div class="info-block">
                     <span class="name">Quote</span>
                     <span class="hint">Tell it like they said it, quote source and all</span>
                 </div>
             </li>
             <li data-class="status">
-                <div class="photo-block">
-                    <img src="/img/alert-blk.png"/>
-                </div>
+                <div class="photo-block status"></div>
                 <div class="info-block">
                     <span class="name">Status</span>
                     <span class="hint">Good, bad, and warning signals, nice and bright</span>
