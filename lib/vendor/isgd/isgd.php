@@ -123,3 +123,4 @@ if($result["errorCode"]==3)
     //from using v.gd again for 1 minute or so.
 }
 ?>
+*/
