@@ -10,6 +10,24 @@
       $('#editor > .widget').each(function() {
         return data.blocks.push($(this).data('model').get());
       });
+      form.find('button').prop('disabled', true);
+      $.ajax({
+        url: '/create/',
+        data: {
+          report: JSON.stringify(data)
+        },
+        type: 'POST',
+        dataType: 'JSON',
+        success: function(result) {
+          form.find('button').prop('disabled', false);
+          if (result.status === 'Success') {
+            alert('Your report is created and published');
+            return location.href = '/';
+          } else {
+            return alert(result.content);
+          }
+        }
+      });
       return false;
     });
   });
