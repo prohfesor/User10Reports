@@ -30,10 +30,4 @@
         </div> <!-- /Header -->
 
         <div class="content">
-            <div class="wrap edit-page">
-                <div class="sidebar">
 
-                </div>
-
-
-                <div class="main">
