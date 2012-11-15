@@ -12,9 +12,12 @@
     $('#add-widget-tab').click(function() {
       return $('#types-form').showForm();
     });
-    return $('#tabs .button').click(function() {
+    $('#tabs .button').click(function() {
       $(this).closest('ul').find('.button').removeClass('active');
       return $(this).addClass('active');
+    });
+    return $('#share-tab').click(function() {
+      return $('#share-form').showForm();
     });
   });
 

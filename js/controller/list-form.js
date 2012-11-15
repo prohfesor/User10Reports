@@ -2,31 +2,34 @@
 (function() {
 
   jQuery(function($) {
-    var addInp, liTpl, list;
+    var addInp, addItem, liTpl, list, max;
     list = $('#form-list');
+    max = list.data('max');
     liTpl = list.find('> li:first').detach();
     addInp = $('#add-list-item').keydown(function(e) {
-      var li, max;
       if (e.keyCode !== 13) {
         return null;
       }
+      addItem(this.value);
+      return false;
+    });
+    addItem = function(value) {
+      var li;
       li = liTpl.clone();
-      li.find('input').val(this.value).blur(function() {
-        if (this.value === '') {
-          $(this).parent().remove();
+      li.find('input').val(value).blur(function() {
+        if (value === '') {
+          addInp.parent().remove();
           addInp.prop('disabled', false);
           return addInp.attr('placeholder', 'Add Item...');
         }
       });
       addInp.parent().before(li);
-      max = 1 + list.data('max');
-      this.value = '';
-      this.disabled = max === list.children().length;
-      if (this.disabled) {
-        addInp.attr('placeholder', "Only " + (max - 1) + " items available");
+      addInp.val('');
+      addInp.prop('disabled', max + 1 === list.children().length);
+      if (addInp.prop('disabled')) {
+        return addInp.attr('placeholder', "Only " + max + " items available");
       }
-      return false;
-    });
+    };
     $('#list-form input[name=list_type]').change(function() {
       list.removeClass('square digit').addClass(this.value);
       list.next().removeClass('square digit').addClass(this.value);
@@ -37,8 +40,20 @@
       $(this).closest('ul').find('> li').removeClass('active');
       return $(this).closest('li').addClass('active');
     });
-    return $('.side-block li').has(':radio').click(function() {
-      return $(this).find(':radio').prop('checked', true).trigger('change');
+    $('#list-form').on('clearForm', function() {
+      var lis;
+      lis = list.find('> li');
+      return lis.slice(0, lis.length - 1).remove();
+    });
+    return $('#list-form').on('setFormData', function(e, data) {
+      var value, _i, _len, _ref, _results;
+      _ref = data.list;
+      _results = [];
+      for (_i = 0, _len = _ref.length; _i < _len; _i++) {
+        value = _ref[_i];
+        _results.push(addItem(value));
+      }
+      return _results;
     });
   });
 

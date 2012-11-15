@@ -14,11 +14,13 @@
     ListWidget.prototype.data = {
       id: 0,
       report_id: 0,
+      type: 'list',
       row: 1,
       col: 1,
-      title: '',
-      list: ['Direct', 'Direct2'],
-      list_type: 'bullet'
+      name: '',
+      list: [],
+      list_type: 'bullet',
+      source: ''
     };
 
     return ListWidget;
@@ -45,12 +47,15 @@
           }
         },
         '.area': {
-          html: '@title'
+          html: '@name'
         },
         'ul': {
           onModel: {
             '@list_type': function(ul, type) {
               return ul.removeClass('square digit').addClass(type);
+            },
+            '@source': function(node, text) {
+              return node.attr('title', text).tipsy();
             }
           },
           each: {
