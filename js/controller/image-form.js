@@ -6,7 +6,7 @@
     form = $('#image-form form');
     return form.find(':file').change(function() {
       var _this = this;
-      return form.ajaxForm({
+      return form.ajaxSubmit({
         url: '/image_upload/',
         dataType: 'JSON',
         success: function(result) {
