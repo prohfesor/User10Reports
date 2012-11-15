@@ -22,6 +22,7 @@ class Report
         {
             $q .= " LIMIT ".(int)$limit.", ".(int)$offset;
         }
+        $q .= " ORDER BY `created` DESC";
         $result = $db->fetch_all_rows($q);
         foreach($result as $k=>$report){
             $report->user = User::find($report->user_id);
