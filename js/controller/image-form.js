@@ -11,7 +11,7 @@
         dataType: 'JSON',
         success: function(result) {
           if (result.status === 'Success') {
-            return form.find('input[name=image]').val(result.content);
+            return form.find('input[name=picture]').val(result.content);
           } else {
             return alert(result.content);
           }

@@ -20,7 +20,7 @@
     });
     window.showTypeForm = function() {
       $('#toggle-tab').removeClass('close').addClass('switch active');
-      $('#about-tab').show();
+      $('#about-tab').show().removeClass('active');
       $('#add-widget-tab').show().addClass('active');
       $('#edit-tab').hide();
       $('#types-form').showForm();
