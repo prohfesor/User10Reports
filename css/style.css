@@ -184,6 +184,7 @@ button                         { color: #fff; padding: 0; border: 0; }
 }
 .footer .copy {
   float: right;
+  padding: 0 5px 0 0;
 }
 .footer .copy, .footer .mail {
   display: block;
@@ -535,14 +536,26 @@ h1 {
 .side-block .form-block .square li:last-child, .side-block .form-block .digit li:last-child {
   border-bottom: 0;
 }
-.side-block .form-block .square span, .side-block .form-block .digit span {
-  color: #333;
+.side-block .form-block .square .text, .side-block .form-block .digit .text {
   font-size: 13px;
   vertical-align: middle;
   display: inline-block;
   margin: -3px 0 0 5px;
   padding: 3px 0 3px 11px;
   border-left: 1px dotted #CCC;
+}
+
+.side-block .form-block .colored li {
+  font-size: 42px;
+}
+.side-block .form-block .square .red {
+  color: #F33;
+}
+.side-block .form-block .square .green {
+  color: #6C0;
+}
+.side-block .form-block .square .yellow {
+  color: #FC0;
 }
 
 
@@ -564,18 +577,21 @@ h1 {
 
 
 
-.side-block .form-block .add-item span {
-  font-style: italic;
-  color: #999;
-}
 
-.side-block .form-block .input-block input::-webkit-input-placeholder {
+
+.side-block .form-block .input-block input::-webkit-input-placeholder,
+.side-block .square input::-webkit-input-placeholder,
+.side-block .digit input::-webkit-input-placeholder {
   font-style: italic;
 }
-.side-block .form-block .input-block input:-moz-placeholder {
+.side-block .form-block .input-block input:-moz-placeholder,
+.side-block .square input:-moz-placeholder,
+.side-block .digit input:-moz-placeholder {
   font-style: italic;
 }
-.side-block .form-block .input-block input:-ms-input-placeholder {
+.side-block .form-block .input-block input:-ms-input-placeholder,
+.side-block .square input:-ms-input-placeholder,
+.side-block .digit input:-ms-input-placeholder {
   font-style: italic;
 }
 
