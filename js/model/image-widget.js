@@ -14,10 +14,12 @@
     ImageWidget.prototype.data = {
       id: 0,
       report_id: 0,
+      type: 'image',
       row: 1,
       col: 1,
-      text: '',
-      image: ''
+      caption: '',
+      picture: '',
+      source: ''
     };
 
     return ImageWidget;
@@ -43,13 +45,18 @@
             }
           },
           onModel: {
-            '@image': function(li, url) {
-              return li.css('background-image', url);
+            '@picture': function(li, url) {
+              return li.css('background-image', "url(" + url + ")");
             }
           }
         },
         'p': {
-          html: '@text'
+          html: '@caption',
+          onModel: {
+            '@source': function(node, text) {
+              return node.attr('title', text).tipsy();
+            }
+          }
         }
       };
 

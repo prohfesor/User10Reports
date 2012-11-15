@@ -8,6 +8,7 @@
     };
     $.fn.setFormData = function(data) {
       var inp, name, value;
+      this.clearForm();
       for (name in data) {
         value = data[name];
         inp = this.find('*[name=' + name + ']');
@@ -19,6 +20,7 @@
           inp.val(value);
         }
       }
+      this.trigger('setFormData', [data]);
       return this;
     };
     $.fn.getFormData = function() {
@@ -59,22 +61,30 @@
     };
     $.fn.clearForm = function() {
       this.find('input:text, textarea, select').val('');
-      return this.setFormModel(null);
+      this.find('input[type=radio]:first').prop('checked', true).trigger('change');
+      this.setFormModel(null);
+      return this.trigger('clearForm');
     };
     $('#forms form').submit(function() {
       var $this, addBtn, className, coord, data, newAddBtn, view, widget;
       $this = $(this);
+      className = $this.closest('.side-block').attr('id').replace('-form', '');
+      if (!(className in widgetMap)) {
+        return null;
+      }
       data = $this.getFormData();
       if ($this.getFormModel()) {
         $this.getFormModel().set(data);
       } else {
-        className = $this.closest('.side-block').attr('id').replace('-form', '');
         widget = new widgetMap[className].model(data);
         view = new widgetMap[className].view(widget);
+        widget.$node = view.getHtml();
         $this.setFormModel(widget);
+        WidgetList.push(widget);
         addBtn = $('#add-widget');
         coord = addBtn.coords().grid;
         newAddBtn = addBtn.hide().clone();
+        widget.set(coord);
         Editor.remove_widget(addBtn, function() {
           Editor.add_widget(view.getHtml(), 1, 1, coord.col, coord.row);
           return Editor.add_widget(newAddBtn, 1, 1, coord.col + 1, coord.row);
@@ -82,8 +92,11 @@
       }
       return false;
     });
-    return $('#forms form .cancel').click(function() {
+    $('#forms form .cancel').click(function() {
       return $('#types-form').showForm();
+    });
+    return $('.side-block li').has(':radio').click(function() {
+      return $(this).find(':radio').prop('checked', true).trigger('change');
     });
   });
 
