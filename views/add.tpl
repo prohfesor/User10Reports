@@ -40,7 +40,7 @@
     <ul>
         <li class="first"><a href="/" class="logo"><img src="/img/logo.png" alt="Logo"/></a></li>
         <li><a href="/" class="icon reports" title="Reports"></a></li>
-        <li class="active"><a href="#" class="icon add" title="New Report"></a></li>
+        <li class="active"><a href="/add/" class="icon add" title="New Report"></a></li>
     </ul>
 </div>
 <!-- /Header -->
