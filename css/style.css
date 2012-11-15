@@ -62,6 +62,21 @@ button                         { color: #fff; padding: 0; border: 0; }
   list-style: disc;
 }
 
+
+
+.digit {
+  counter-reset: item;
+  list-style-type: none;
+}
+.digit li:before { 
+  content: counter(item) "  "; 
+  counter-increment: item 
+}
+.digit li {
+  display: block;
+  list-style: decimal inside;
+  font-size: 22px;
+}
 /*----------------------------------------------------------------------------------*/
 /*-------------------------------> Styles of buttons <------------------------------*/
 /*----------------------------------------------------------------------------------*/
@@ -318,9 +333,15 @@ h1, .reports-list .report .name {
   padding: 22px 0 0 20px;
   text-align: left;
 }
-.edit-blocks .with-list li {
+.edit-blocks .with-list .square li {
   font-size: 28px;
   list-style: square inside;
+}
+.edit-blocks .with-list .digit li {
+  font-size: 18px;
+  list-style: decimal inside;
+}
+.edit-blocks .with-list .square li, .edit-blocks .with-list .digit li {
   color: #CCC;
   line-height: 20px;
 }
@@ -331,6 +352,7 @@ h1, .reports-list .report .name {
   display: inline-block;
   margin: -2px 0 0;
 }
+
 /*----------------------------------------------------------------------------------*/
 /*------------------------------------> Sidebar <-----------------------------------*/
 /*----------------------------------------------------------------------------------*/
@@ -597,20 +619,6 @@ h1, .reports-list .report .name {
 }
 .side-block .form-block .choose-type .square {
   border-bottom: 1px solid #E4E4E4;
-}
-
-.side-block .form-block .digit {
-  counter-reset: item;
-  list-style-type: none;
-}
-.side-block .form-block .digit li:before { 
-  content: counter(item) "  "; 
-  counter-increment: item 
-}
-.side-block .form-block .digit li {
-  display: block;
-  list-style: decimal inside;
-  font-size: 22px;
 }
 
 
