@@ -5,3 +5,4 @@
 
 /cache/smarty/templates/*.php
 /config/config.php
+/uploads/images/user*
