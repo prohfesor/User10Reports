@@ -158,7 +158,7 @@
     <div class="side-caption"><h2>Edit data</h2></div>
     <div class="form-block">
         <form enctype="multipart/form-data">
-            <label>Upload picture (<a href="#" class="upload-link">or link</a>):</label>
+            <label>Upload picture:</label>
 
             <div class="input-block browse">
                 <button class="btn-browse">Browse</button>
@@ -388,7 +388,7 @@
 
     <div class="caption with-date">
         <h1>New Report</h1>
-        <span class="date">Oct. 18, 2012 - Oct. 24, 2012</span>
+        <span class="date"></span>
     </div>
 
     <div id="editor-wrap">

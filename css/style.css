@@ -309,6 +309,9 @@ h1, .reports-list .report .name {
   color: #9D7A00;
 }
 
+.edit-blocks .with-image {
+    background-repeat: no-repeat;
+}
 .edit-blocks .with-image p {
   color: #FFF;
   background-repeat: no-repeat;
