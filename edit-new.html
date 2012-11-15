@@ -7,9 +7,11 @@
     <link rel="stylesheet" type="text/css" href="/css/style.css"/>
     <link rel="stylesheet" href="/css/jquery.gridster.min.css"/>
     <link rel="stylesheet" href="/css/tipsy.css"/>
+    <link rel="stylesheet" href="/css/datepicker.css"/>
 
     <script src="http://code.jquery.com/jquery-1.8.2.min.js"></script>
     <script src="/js/lib/jquery.gridster.min.js"></script>
+    <script src="/js/lib/datepicker.js"></script>
     <script src="/js/lib/jquery.form.js"></script>
     <script src="/js/lib/jquery.tipsy.js"></script>
 
@@ -28,6 +30,7 @@
     <script src="/js/controller/forms.js"></script>
     <script src="/js/controller/list-form.js"></script>
     <script src="/js/controller/image-form.js"></script>
+    <script src="/js/controller/save-report.js"></script>
     <script src="/js/controller/app.js"></script>
 </head>
 <body>
@@ -50,7 +53,7 @@
 
 <div class="side-block" id="types-form">
     <div class="side-caption"><h2>Add Data</h2></div>
-    <div class="form-block widget-type">
+    <div class="form-block side-list">
         <ul class="">
             <li data-class="custom">
                 <div class="photo-block">
@@ -108,20 +111,20 @@
             <label>Report Name:</label>
 
             <div class="input-block">
-                <input type="text" placeholder="Social Media Marketing Report"/>
+                <input type="text" name="name" placeholder="Social Media Marketing Report"/>
             </div>
 
             <label>Reporting for date range:</label>
 
-            <div class="input-block date">
+            <div class="input-block date with-icon">
                 <a href="#" class="icon"></a>
-                <input type="text"/>
+                <input type="text" name="date"/>
             </div>
 
             <label>Created by:</label>
 
             <div class="input-block">
-                <input type="text" placeholder="youremail@example.com"/>
+                <input type="text" name="email" placeholder="youremail@example.com"/>
             </div>
 
             <button class="btn-green">Publish Report</button>
@@ -141,7 +144,7 @@
 
             <label>Data Name:</label>
             <div class="input-block">
-                <input type="text" name="title" placeholder="Social Media Marketing Report"/>
+                <input type="text" name="name" placeholder="Social Media Marketing Report"/>
             </div>
 
             <label>Data source(s):</label>
@@ -165,8 +168,8 @@
 
             <div class="input-block browse">
                 <button class="btn-browse">Browse</button>
-                <input type="text"/>
-                <input type="file" class="file-input"/>
+                <input type="text" name="picture"/>
+                <input type="file" name="file" class="file-input"/>
             </div>
 
             <div class="input-caption">
@@ -174,13 +177,13 @@
                 <label>Caption:</label>
             </div>
             <div class="input-block">
-                <textarea></textarea>
+                <textarea name="caption"></textarea>
             </div>
 
             <label>Data source(s):</label>
 
             <div class="input-block">
-                <input type="text" placeholder="Optional"/>
+                <input type="text" name="source" placeholder="Optional"/>
             </div>
 
             <button class="btn-green">Save and Continue Editing</button>
@@ -198,7 +201,7 @@
             <label>List Name:</label>
 
             <div class="input-block">
-                <input type="text" name="title" placeholder="Social Media Marketing Report"/>
+                <input type="text" name="name" placeholder="Social Media Marketing Report"/>
             </div>
 
             <label>List:</label>
@@ -228,7 +231,7 @@
             <label>Data source(s):</label>
 
             <div class="input-block">
-                <input type="text" placeholder="Optional"/>
+                <input type="text" name="source" placeholder="Optional"/>
             </div>
 
             <button class="btn-green">Save and Continue Editing</button>
@@ -246,7 +249,7 @@
             <label>Quote source:</label>
 
             <div class="input-block">
-                <input type="text" name="title" placeholder="Forbes Magazine, October 2012"/>
+                <input type="text" name="source" placeholder="Forbes Magazine, October 2012"/>
             </div>
 
             <div class="input-caption">
@@ -254,7 +257,7 @@
                 <label>Quote:</label>
             </div>
             <div class="input-block">
-                <textarea name="text"></textarea>
+                <textarea name="quote"></textarea>
             </div>
 
             <button class="btn-green">Save and Continue Editing</button>
@@ -303,7 +306,7 @@
 
             <label>Data source(s):</label>
             <div class="input-block">
-                <input type="text" placeholder="Optional"/>
+                <input type="text" name="source" placeholder="Optional"/>
             </div>
 
             <button class="btn-green">Save and Continue Editing</button>
@@ -312,6 +315,52 @@
         </form>
     </div>
 </div>
+
+<div class="side-block" id="share-form">
+    <div class="side-caption"><h2>Share</h2></div>
+    <div class="form-block side-list">
+        <div class="add-block">
+            <form>
+                <div class="input-block with-icon add-mail">
+                    <button class="icon"></button>
+                    <input type="text" placeholder="recipient@email.com" />
+                </div>
+            </form>
+            <span class="share-link">Or share: <a href="#">http://lik.ie/r12345</a></span>
+        </div>
+
+        <ul class="mail-list">
+            <li>
+                <div class="photo-block">
+                    <img src="" />
+                </div>
+                <div class="info-block">
+                    <span class="mail">jonathan@user10.com</span>
+                    <span class="hint">Created 2 days ago</span>
+                </div>
+            </li>
+            <li>
+                <div class="photo-block">
+                    <img src="" />
+                </div>
+                <div class="info-block">
+                    <span class="mail">jonathan@user10.com</span>
+                    <span class="hint">Created 2 days ago</span>
+                </div>
+            </li>
+            <li>
+                <div class="photo-block">
+                    <img src="" />
+                </div>
+                <div class="info-block">
+                    <span class="mail">jonathan@user10.com</span>
+                    <span class="hint">Created 2 days ago</span>
+                </div>
+            </li>
+        </ul>
+    </div>
+</div>
+
 </div>
 
 <ul class="buttons-block" id="tabs">

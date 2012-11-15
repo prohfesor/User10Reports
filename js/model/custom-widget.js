@@ -14,10 +14,12 @@
     CustomWidget.prototype.data = {
       id: 0,
       report_id: 0,
+      type: 'custom',
       row: 1,
       col: 1,
-      title: '',
-      data: ''
+      name: '',
+      data: '',
+      source: ''
     };
 
     return CustomWidget;
@@ -47,7 +49,12 @@
           html: '@data'
         },
         '.area': {
-          html: '@title'
+          html: '@name',
+          onModel: {
+            '@source': function(node, text) {
+              return node.attr('title', text).tipsy();
+            }
+          }
         }
       };
 

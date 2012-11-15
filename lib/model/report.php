@@ -39,8 +39,28 @@ class Report
         if($result){
             $result->user = User::find($result->user_id);
             $result->blocks = Blocks::getReport($id);
+            $result->share = Share::getReport($id);
+            //check shorturl
+            if(empty($result->link)){
+                $result->link = self::getShortlink($id);
+            }
         }
         return $result;
+    }
+
+
+    public static function getShortlink($id)
+    {
+        $db = flyDb::getInstance();
+        $url = 'http://'.$_SERVER['SERVER_NAME']."/view/".$id."/";
+        $lnk = vgdShorten( $url );
+        if(!empty($lnk['shortURL'])){
+            $q = "UPDATE `report` SET link=".flySqlUtil::prepareString($lnk['shortURL'])." WHERE id=".(int)$id;
+            $db->exec($q);
+            return $lnk['shortURL'];
+        } else {
+            return false;
+        }
     }
 
 }

@@ -14,11 +14,13 @@
     StatusWidget.prototype.data = {
       id: 0,
       report_id: 0,
+      type: 'status',
       row: 1,
       col: 1,
       title: '',
       name: '',
-      status: ''
+      status: '',
+      source: ''
     };
 
     return StatusWidget;
@@ -40,7 +42,7 @@
         '': {
           on: {
             'click': function() {
-              return $('#status-form').setFormData(this.get()).data('model', this).showForm();
+              return $('#status-form').setFormData(this.get()).setFormModel(this).showForm();
             }
           },
           cssClass: {
@@ -70,7 +72,12 @@
           html: '@title'
         },
         '.area': {
-          html: '@name'
+          html: '@name',
+          onModel: {
+            '@source': function(node, text) {
+              return node.attr('title', text).tipsy();
+            }
+          }
         }
       };
 

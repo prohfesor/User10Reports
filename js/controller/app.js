@@ -4,9 +4,24 @@
   jQuery(function($) {
     $('.gridster > ul').gridster({
       widget_margins: [0, 0],
-      widget_base_dimensions: [200, 200]
+      widget_base_dimensions: [200, 200],
+      draggable: {
+        stop: function(e, ui) {
+          var widget, _i, _len, _results;
+          _results = [];
+          for (_i = 0, _len = WidgetList.length; _i < _len; _i++) {
+            widget = WidgetList[_i];
+            _results.push(widget.set({
+              col: widget.$node.attr('data-col'),
+              row: widget.$node.attr('data-row')
+            }));
+          }
+          return _results;
+        }
+      }
     });
-    window.Editor = $('.gridster > ul').gridster().data('gridster');
+    window.Editor = $('.gridster > ul').data('gridster');
+    window.WidgetList = [];
     $('#about-form').showForm();
     window.widgetMap = {
       custom: {

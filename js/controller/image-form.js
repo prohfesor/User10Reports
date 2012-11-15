@@ -3,16 +3,22 @@
 
   jQuery(function($) {
     var form;
-    form = $('#image-form');
+    form = $('#image-form form');
     return form.find(':file').change(function() {
       var _this = this;
       this.disabled = true;
       form.find('button').prop('disabled', true);
       return form.ajaxForm({
-        success: function(data) {
+        url: '/image_upload/',
+        dataType: 'JSON',
+        success: function(result) {
           _this.disabled = false;
-          form.find('input[name=image]').val(data);
-          return form.find('button').prop('disabled', false);
+          form.find('button').prop('disabled', false);
+          if (result.status === 'Success') {
+            return form.find('input[name=image]').val(result.content);
+          } else {
+            return alert(result.content);
+          }
         }
       });
     });

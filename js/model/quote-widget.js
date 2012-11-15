@@ -14,10 +14,11 @@
     QuoteWidget.prototype.data = {
       id: 0,
       report_id: 0,
+      type: 'quote',
       row: 1,
       col: 1,
-      title: '',
-      text: ''
+      source: '',
+      quote: ''
     };
 
     return QuoteWidget;
@@ -44,10 +45,10 @@
           }
         },
         'p': {
-          html: '@text'
+          html: '@quote'
         },
         '.area': {
-          html: '@title'
+          html: '@source'
         }
       };
 
