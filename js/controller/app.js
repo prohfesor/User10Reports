@@ -7,8 +7,8 @@
       widget_base_dimensions: [200, 200]
     });
     window.Editor = $('.gridster > ul').gridster().data('gridster');
-    $('#types-form').showForm();
-    return window.widgetMap = {
+    $('#about-form').showForm();
+    window.widgetMap = {
       custom: {
         model: CustomWidget,
         view: CustomView
@@ -30,6 +30,9 @@
         view: StatusView
       }
     };
+    return $('*[title]').tipsy({
+      gravity: 'n'
+    });
   });
 
 }).call(this);

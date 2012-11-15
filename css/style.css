@@ -160,7 +160,7 @@ button                         { color: #fff; padding: 0; border: 0; }
 .header li {
   overflow: hidden;
 }
-.header li:hover {
+.header li.active {
   border-bottom: 6px solid #0C9;
   height: 60px;
   margin-left: -1px;
@@ -578,7 +578,7 @@ h1 {
 .side-block .form-block .marked-list input.text {
   width: 220px;
 }
-.side-block .form-block .choose-type .radio {
+.side-block .form-block input[type="radio"] {
   float: right;
   margin: 5px 10px 0 0;
   width: auto;

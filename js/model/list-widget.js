@@ -42,17 +42,17 @@
             'click': function() {
               return $('#list-form').setFormData(this.get()).setFormModel(this).showForm();
             }
-          },
-          onModel: {
-            '@list_type': function(li, type) {
-              return li.removeClass('bullet numeric').addClass(type);
-            }
           }
         },
         '.area': {
           html: '@title'
         },
-        '.square': {
+        'ul': {
+          onModel: {
+            '@list_type': function(ul, type) {
+              return ul.removeClass('square digit').addClass(type);
+            }
+          },
           each: {
             dataField: 'list',
             template: {

@@ -2,11 +2,11 @@
 (function() {
 
   jQuery(function($) {
-    var liTpl, list;
+    var addInp, liTpl, list;
     list = $('#form-list');
     liTpl = list.find('> li:first').detach();
-    return $('#add-list-item').keydown(function(e) {
-      var li;
+    addInp = $('#add-list-item').keydown(function(e) {
+      var li, max;
       if (e.keyCode !== 13) {
         return null;
       }
@@ -14,13 +14,31 @@
       li.find('input').val(this.value).blur(function() {
         if (this.value === '') {
           $(this).parent().remove();
-          return $('#add-list-item').prop('disabled', false);
+          addInp.prop('disabled', false);
+          return addInp.attr('placeholder', 'Add Item...');
         }
       });
-      list.append(li);
+      addInp.parent().before(li);
+      max = 1 + list.data('max');
       this.value = '';
-      this.disabled = parseInt(list.data('max')) === list.children().length;
+      this.disabled = max === list.children().length;
+      if (this.disabled) {
+        addInp.attr('placeholder', "Only " + (max - 1) + " items available");
+      }
       return false;
+    });
+    $('#list-form input[name=list_type]').change(function() {
+      list.removeClass('square digit').addClass(this.value);
+      list.next().removeClass('square digit').addClass(this.value);
+      $(this).closest('div').find('li').removeClass('active');
+      return $(this).closest('li').addClass('active');
+    });
+    $('#status-form input[type=radio]').change(function() {
+      $(this).closest('ul').find('> li').removeClass('active');
+      return $(this).closest('li').addClass('active');
+    });
+    return $('.side-block li').has(':radio').click(function() {
+      return $(this).find(':radio').prop('checked', true).trigger('change');
     });
   });
 

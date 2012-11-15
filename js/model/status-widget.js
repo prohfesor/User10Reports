@@ -17,6 +17,7 @@
       row: 1,
       col: 1,
       title: '',
+      name: '',
       status: ''
     };
 
@@ -41,13 +42,35 @@
             'click': function() {
               return $('#status-form').setFormData(this.get()).data('model', this).showForm();
             }
+          },
+          cssClass: {
+            'green': {
+              '@status': function(status) {
+                return status === 'good';
+              }
+            },
+            'yellow': {
+              '@status': function(status) {
+                return status === 'warning';
+              }
+            },
+            'red': {
+              '@status': function(status) {
+                return status === 'negative';
+              }
+            },
+            'grey': {
+              '@status': function(status) {
+                return status === 'neutral';
+              }
+            }
           }
         },
         '.block-caption': {
           html: '@title'
         },
         '.area': {
-          html: '@status'
+          html: '@name'
         }
       };
 
