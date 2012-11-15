@@ -7,7 +7,7 @@ if(empty($_SERVER['HTTP_REFERER']) || !stripos($_SERVER['HTTP_REFERER'], $_SERVE
 
 //upload pic
 $upload = flyImageUpload::getInstance();
-$i = $upload->get('image', DIR_ROOT."/uploads/images/");
+$i = $upload->get('file', DIR_ROOT."/uploads/images/");
 if($i){
     unlink($i);
 }
