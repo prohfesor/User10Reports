@@ -2,9 +2,20 @@
 (function() {
 
   jQuery(function($) {
+    $('#edit-tab, #share-tab').hide();
     $('#toggle-tab').click(function() {
-      $('#forms').toggle();
-      return $(this).toggleClass('active');
+      var $this;
+      $this = $(this);
+      if ($this.hasClass('close')) {
+        $this.toggleClass('switch close');
+        $('#about-tab').show();
+        $('#add-widget-tab').show().addClass('active');
+        $('#edit-tab').hide();
+        return $('#types-form').showForm();
+      } else {
+        $('#forms').toggle();
+        return $(this).toggleClass('active');
+      }
     });
     $('#about-tab').click(function() {
       return $('#about-form').showForm();

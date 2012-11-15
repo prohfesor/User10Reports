@@ -4,17 +4,12 @@
   jQuery(function($) {
     var form;
     return form = $('#about-form form').submit(function() {
-      var data, formData, widget, _i, _len;
-      formData = form.getFormData();
-      data = {
-        name: formData.name,
-        email: formData.email,
-        blocks: []
-      };
-      for (_i = 0, _len = WidgetList.length; _i < _len; _i++) {
-        widget = WidgetList[_i];
-        data.blocks.push(widget.get());
-      }
+      var data;
+      data = form.getFormData();
+      data.blocks = [];
+      $('#editor > .widget').each(function() {
+        return data.blocks.push($(this).data('model').get());
+      });
       form.find('button').prop('disabled', true);
       $.ajax({
         url: '/create/',

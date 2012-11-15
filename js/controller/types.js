@@ -4,6 +4,9 @@
   jQuery(function($) {
     return $('#types-form li').click(function() {
       var $this, className;
+      $('#toggle-tab').toggleClass('switch close');
+      $('#edit-tab').show().addClass('active');
+      $('#about-tab, #add-widget-tab').hide();
       $this = $(this);
       className = $this.data('class');
       return $('#' + className + '-form').clearForm().showForm();
