@@ -288,19 +288,19 @@
             <div class="input-block">
                 <ul class="square colored marked-list">
                     <li class="green active">
-                        <input type="radio" name="status" value="good" checked/>
+                        <input type="radio" name="status" value="green" checked/>
                         <span class="text">Good</span>
                     </li>
                     <li class="yellow">
-                        <input type="radio" name="status" value="warning"/>
+                        <input type="radio" name="status" value="yellow"/>
                         <span class="text">Warning</span>
                     </li>
                     <li class="red">
-                        <input type="radio" name="status" value="negative"/>
+                        <input type="radio" name="status" value="red"/>
                         <span class="text">Negative</span>
                     </li>
                     <li class="grey">
-                        <input type="radio" name="status" value="neutral"/>
+                        <input type="radio" name="status" value="grey"/>
                         <span class="text">Neutral</span>
                     </li>
                 </ul>
