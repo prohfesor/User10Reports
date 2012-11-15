@@ -101,14 +101,13 @@
             <label>Report Name:</label>
 
             <div class="input-block">
-                <input type="text" name="name" placeholder="Social Media Marketing Report"/>
+                <input type="text" name="name"/>
             </div>
 
             <label>Reporting for date range:</label>
 
             <div class="input-block date with-icon">
-                <a href="#" class="icon"></a>
-                <input type="text" id="report-date"/>
+                <input type="text" id="report-date" readonly/>
                 <input type="hidden" name="date_from" id="date_from"/>
                 <input type="hidden" name="date_to" id="date_to"/>
             </div>

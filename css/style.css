@@ -515,14 +515,17 @@ h1, .reports-list .report .name {
   font-size: 40px;
 }
 .side-block .form-block .with-icon input {
-  width: 220px;
+  width: 260px;
+  background: url(../img/calendar-blk.png) no-repeat;
+  background-position: right 12px bottom 12px;
+  cursor: pointer;
 }
 .side-block .form-block .add-mail .icon {
   background: url(../img/plus-blk.png) 12px 12px no-repeat;
   cursor: pointer;
 }
 .side-block .form-block .date .icon {
-  background: url(../img/calendar-blk.png) 12px 12px no-repeat;
+
 }
 .side-block .form-block .with-icon .icon {
   display: block;
