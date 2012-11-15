@@ -594,7 +594,7 @@ h1, .reports-list .report .name {
 .side-block .form-block .square .square-inside {
   position: absolute;
   left: 31px;
-  top: 5px;
+  top: 7px;
   width: 247px;
 }
 
@@ -604,6 +604,7 @@ h1, .reports-list .report .name {
 .side-block .form-block .square li, .side-block .form-block .digit li {
   color: #CCC;
   line-height: 20px;
+  height: 21px;
   border-bottom: 1px solid #E4E4E4;
 }
 .side-block .form-block .square li:last-child,
@@ -620,7 +621,7 @@ h1, .reports-list .report .name {
   border-left: 1px dotted #CCC;
 }
 .side-block .form-block .square .text {
-  margin-top: -2px;
+  margin-top: -5px;
 }
 
 .side-block .form-block .colored li {
@@ -642,6 +643,9 @@ h1, .reports-list .report .name {
 }
 .side-block .form-block .choose-type li span {
   color: #AAA;
+}
+.side-block .form-block .choose-type li span.text {
+  padding: 1px 0 1px 11px;
 }
 /*
 .side-block .form-block .choose-type .square span {
