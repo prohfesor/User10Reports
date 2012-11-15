@@ -13,6 +13,11 @@
       addItem(this.value);
       return false;
     });
+    addInp.blur(function() {
+      if (this.value !== '') {
+        return addItem(this.value);
+      }
+    });
     addItem = function(value) {
       var li;
       li = liTpl.clone();

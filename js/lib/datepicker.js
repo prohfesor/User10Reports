@@ -842,7 +842,8 @@
 						}
 					}
 				});
-			}
+			},
+            formatDate: formatDate
 		};
 	}();
 	$.fn.extend({
@@ -852,7 +853,8 @@
 		DatePickerSetDate: DatePicker.setDate,
 		DatePickerGetDate: DatePicker.getDate,
 		DatePickerClear: DatePicker.clear,
-		DatePickerLayout: DatePicker.fixLayout
+		DatePickerLayout: DatePicker.fixLayout,
+		DatePickerFormatDate: DatePicker.formatDate
 	});
 })(jQuery);
 
