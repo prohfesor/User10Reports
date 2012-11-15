@@ -1,4 +1,6 @@
-<li class="{$block->data['color']|default:"green"}" title="{$block->data['source']}">
+<li class="{$block->data['color']|default:"green"}">
+    <table><tr><td>
     <span class="block-caption">{$block->data['status']}</span>
-    <span class="area">{$block->data['name']}</span>
+    <span class="area" title="{$block->data['source']}">{$block->data['name']}</span>
+    </td></tr></table>
 </li>

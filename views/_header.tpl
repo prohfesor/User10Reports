@@ -9,7 +9,10 @@
     <title>Likely Reports</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width">
+
     <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/tipsy.css"/>
+
     <script src="/js/modernizr-2.5.3.min.js"></script>
 </head>
 <body>
@@ -23,9 +26,9 @@
         <div class="header">
             <!--<a href="#" class="logo"><img src="img/logo.png" alt="Logo" /></a>-->
             <ul>
-                <li class="first"><a href="/" class="logo"><img src="/img/logo.png" alt="Logo" /></a></li>
-                <li><a href="/" class="icon reports"></a></li>
-                <li><a href="/add/" class="icon add"></a></li>
+                <li class="first"><a href="/" class="logo"><img src="/img/logo.png" alt="Logo"/></a></li>
+                <li class="{if $action!="add"}active{/if}"><a href="/" class="icon reports" title="Reports"></a></li>
+                <li class="{if $action=="add"}active{/if}"><a href="/add/" class="icon add" title="New Report"></a></li>
             </ul>
         </div> <!-- /Header -->
 

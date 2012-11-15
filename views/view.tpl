@@ -68,8 +68,10 @@
     {include file="blocks/`$block->type`.tpl" block=$block}
         {foreachelse}
         <li>
+            <table><tr><td>
             <span class="block-caption">Nothing</span>
             <span class="area">No content at this report</span>
+            </td></tr></table>
         </li>
     {/foreach}
     </ul>
