@@ -665,6 +665,11 @@ h1, .reports-list .report .name {
   background: #CCC;
   margin: 0 11px 0 0;
 }
+.side-block .side-list .widget-type .photo-block {
+  height: 23px;
+  text-align: center;
+  padding: 8px 0 0;
+}
 .side-block .side-list .info-block {
   overflow: hidden;
 }
