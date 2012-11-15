@@ -3,14 +3,21 @@
 
   jQuery(function($) {
     $.fn.showForm = function() {
-      $('#forms > *').hide();
+      $('#forms > .side-block').hide();
       return this.show();
     };
     $.fn.setFormData = function(data) {
-      var name, value;
+      var inp, name, value;
       for (name in data) {
         value = data[name];
-        this.find('*[name=' + name + ']').val(value);
+        inp = this.find('*[name=' + name + ']');
+        if (inp.attr('type') === 'radio') {
+          inp.filter(function() {
+            return this.value === value;
+          }).prop('checked', true).trigger('change');
+        } else {
+          inp.val(value);
+        }
       }
       return this;
     };
@@ -19,7 +26,10 @@
       data = {};
       this.find(':input').each(function() {
         var name;
-        if ((this.name != null) && this.name.length > 0) {
+        if (this.type === 'radio' && this.checked === false) {
+          return null;
+        }
+        if (this.name.length > 0) {
           if (this.name.indexOf('[]') > 0) {
             name = this.name.replace('[]', '');
             if (name in data) {
@@ -35,21 +45,30 @@
       return data;
     };
     $.fn.setFormModel = function(model) {
-      return this.data('model', model);
+      var form;
+      form = this.find('form');
+      form = form.length ? form : this;
+      form.data('model', model);
+      return this;
     };
     $.fn.getFormModel = function() {
-      return this.data('model');
+      var form;
+      form = this.find('form');
+      form = form.length ? form : this;
+      return form.data('model');
     };
     $.fn.clearForm = function() {
       this.find('input:text, textarea, select').val('');
-      return this.data('model', null);
+      return this.setFormModel(null);
     };
     $('#forms form').submit(function() {
       var $this, addBtn, className, coord, data, newAddBtn, view, widget;
       $this = $(this);
       data = $this.getFormData();
-      if ($this.getFormModel() === null) {
-        className = $this.attr('id').replace('-form', '');
+      if ($this.getFormModel()) {
+        $this.getFormModel().set(data);
+      } else {
+        className = $this.closest('.side-block').attr('id').replace('-form', '');
         widget = new widgetMap[className].model(data);
         view = new widgetMap[className].view(widget);
         $this.setFormModel(widget);
@@ -60,8 +79,6 @@
           Editor.add_widget(view.getHtml(), 1, 1, coord.col, coord.row);
           return Editor.add_widget(newAddBtn, 1, 1, coord.col + 1, coord.row);
         });
-      } else {
-        $this.getFormModel().set(data);
       }
       return false;
     });

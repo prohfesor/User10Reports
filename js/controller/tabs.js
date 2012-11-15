@@ -3,10 +3,18 @@
 
   jQuery(function($) {
     $('#toggle-tab').click(function() {
-      return $('#forms').toggle();
+      $('#forms').toggle();
+      return $(this).toggleClass('active');
     });
-    return $('#add-widget-tab').click(function() {
+    $('#about-tab').click(function() {
+      return $('#about-form').showForm();
+    });
+    $('#add-widget-tab').click(function() {
       return $('#types-form').showForm();
+    });
+    return $('#tabs .button').click(function() {
+      $(this).closest('ul').find('.button').removeClass('active');
+      return $(this).addClass('active');
     });
   });
 

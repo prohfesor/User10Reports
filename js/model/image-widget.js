@@ -39,7 +39,7 @@
         '': {
           on: {
             'click': function() {
-              return $('#image-form').setFormData(this.get()).data('model', this).showForm();
+              return $('#image-form').setFormData(this.get()).setFormModel(this).showForm();
             }
           },
           onModel: {

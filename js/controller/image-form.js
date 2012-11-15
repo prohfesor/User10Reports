@@ -3,13 +3,18 @@
 
   jQuery(function($) {
     var form;
-    form = $('#image-form').ajaxForm({
-      success: function(data) {
-        return form.find('input[name=image]').val(data);
-      }
-    });
+    form = $('#image-form');
     return form.find(':file').change(function() {
-      return form.find('input[name=url]').val(this.value);
+      var _this = this;
+      this.disabled = true;
+      form.find('button').prop('disabled', true);
+      return form.ajaxForm({
+        success: function(data) {
+          _this.disabled = false;
+          form.find('input[name=image]').val(data);
+          return form.find('button').prop('disabled', false);
+        }
+      });
     });
   });
 
