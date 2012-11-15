@@ -5,35 +5,41 @@
 <div class="sidebar">
 
 <div class="forms-wrap">
-<div class="side-block">
-    <div class="side-caption"><h2>About the Report</h2></div>
-    <div class="form-block">
-        <form>
-            <label>Report Name:</label>
-            <div class="input-block">
-                <input type="text" placeholder="Social Media Marketing Report" />
+    <div class="side-block" style="display: none">
+        <div class="side-caption"><h2>Share</h2></div>
+        <div class="form-block side-list">
+            <div class="add-block">
+                <form>
+                    <div class="input-block with-icon add-mail">
+                        <button class="icon"></button>
+                        <input type="text" placeholder="recipient@email.com" />
+                    </div>
+                </form>
+                {if !empty($report->link)}
+                <span class="share-link">Or share: <a href="{$report->link}" target="_blank">{$report->link}</a></span>
+                {/if}
             </div>
 
-            <label>Reporting for date range:</label>
-            <div class="input-block date">
-                <a href="#" class="icon"></a>
-                <input type="text" />
-            </div>
-
-            <label>Created by:</label>
-            <div class="input-block">
-                <input type="text" placeholder="youremail@example.com" />
-            </div>
-
-            <button class="btn-green">Publish Report</button>
-        </form>
+            <ul class="mail-list">
+                {foreach from=$report->share item=email}
+                <li>
+                    <div class="photo-block">
+                        <img src="" />
+                    </div>
+                    <div class="info-block">
+                        <span class="mail">{$email->email}</span>
+                        <span class="hint">Created {$email->created|date_format:"%b %e, %Y"}</span>
+                    </div>
+                </li>
+                {/foreach}
+            </ul>
+        </div>
     </div>
-</div>
 </div> <!-- /Forms-wrap -->
 
 <ul class="buttons-block">
-    <li class="first switch active"><a href="#"></a></li>
-    <li class="button share"><a href="#">Share</a></li>
+    <li class="first switch active"><a href="#sidebar"></a></li>
+    <li class="button share"><a href="#share">Share</a></li>
 </ul>
 
 </div> <!-- /Sidebar -->
@@ -58,5 +64,7 @@
         </li>
     {/foreach}
     </ul>
+
+
 
 {include "_footer.tpl"}

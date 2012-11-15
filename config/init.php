@@ -20,7 +20,11 @@ $smarty->compile_dir = DIR_ROOT."/cache/smarty/templates/";
 $smarty->config_dir = DIR_ROOT.'/configs/';
 $smarty->cache_dir = DIR_ROOT."/cache/smarty/";
 
+//url shortener
+require_once('lib/vendor/isgd/isgd.php');
+
 //models
 require_once('lib/model/report.php');
 require_once('lib/model/user.php');
 require_once('lib/model/blocks.php');
+require_once('lib/model/share.php');
