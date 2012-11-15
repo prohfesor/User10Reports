@@ -541,6 +541,8 @@ h1 {
   list-style: square inside;  
   font-size: 28px;
 }
+
+
 .side-block .form-block .square li.active, .side-block .form-block .digit li.active {
   background: #FFF;
 }
@@ -572,11 +574,12 @@ h1 {
 .side-block .form-block .colored li span    { color: #333; }
 
 .side-block .form-block .marked-list input.text {
-  width: 225px;
+  width: 220px;
 }
 .side-block .form-block .choose-type .radio {
   float: right;
   margin: 5px 10px 0 0;
+  width: auto;
 }
 .side-block .form-block .choose-type li span {
   color: #AAA;
@@ -602,6 +605,11 @@ h1 {
   font-size: 22px;
 }
 
+
+.side-block .form-block .square {
+}
+.side-block .form-block .square li:before { 
+}
 
 
 
