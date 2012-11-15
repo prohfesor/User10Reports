@@ -8,7 +8,9 @@
 	require_once('flyDb.php');
 
 	require_once('flyDbTableQuery.php');
-	
+
+    require_once('flyImageUpload.php');
+
 	require_once('flyMail.php');
 
     ini_set('magic_quotes_gpc', 'Off');

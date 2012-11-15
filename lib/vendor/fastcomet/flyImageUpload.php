@@ -5,8 +5,10 @@ require_once('flyImage.php');
 
 class flyImageUpload {
 
-	
-	var $oImage;
+    /**
+     * @var flyImage
+     */
+    var $oImage;
 	
 	
 	/*

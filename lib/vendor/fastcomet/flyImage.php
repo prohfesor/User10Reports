@@ -21,7 +21,7 @@ class flyImage {
 	var $settings_jpg_quality =90;
 	var $settings_extension_autodetect =1;
 	var $settings_duplicate_replace =0;
-	var $settings_duplicate_increment_suffix =0;
+	var $settings_duplicate_increment_suffix =1;
 	var $settings_undo =1;
 	var $settings_resizeborders_color = "#ffffff";
 
@@ -378,7 +378,7 @@ class flyImage {
 	 * Load file and resize it.
 	 */
 	function resize($filename, $width, $height, $mode =RESIZE_MODE_STRICT, $autosave =0, $jpgquality =null){
-		if(!$this->load($filename))	return false;
+		//if(!$this->load($filename))	return false;
 		return $this->_resize($width, $height, $mode, $autosave, $jpgquality);
 	}
 	

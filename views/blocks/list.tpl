@@ -6,5 +6,6 @@
         {if !empty($block->data['line3'])}<li><span>{$block->data['line3']}</span></li>{/if}
         {if !empty($block->data['line4'])}<li><span>{$block->data['line4']}</span></li>{/if}
         {if !empty($block->data['line5'])}<li><span>{$block->data['line5']}</span></li>{/if}
+        {if !empty($block->data['line6'])}<li><span>{$block->data['line6']}</span></li>{/if}
     </ul>
 </li>
