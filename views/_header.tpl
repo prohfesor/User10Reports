@@ -25,7 +25,7 @@
             <ul>
                 <li class="first"><a href="/" class="logo"><img src="/img/logo.png" alt="Logo" /></a></li>
                 <li><a href="/" class="icon reports"></a></li>
-                <li><a href="/add" class="icon add"></a></li>
+                <li><a href="/add/" class="icon add"></a></li>
             </ul>
         </div> <!-- /Header -->
 
