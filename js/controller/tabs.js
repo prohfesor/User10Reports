@@ -14,14 +14,17 @@
       }
     });
     $('#about-tab').click(function() {
-      return $('#about-form').showForm();
+      $('#about-form').showForm();
+      $('#forms').show();
+      return $('#toggle-tab').addClass('active');
     });
     window.showTypeForm = function() {
-      $('#toggle-tab').removeClass('close').addClass('switch');
-      $('#about-tab').show();
+      $('#toggle-tab').removeClass('close').addClass('switch active');
+      $('#about-tab').show().removeClass('active');
       $('#add-widget-tab').show().addClass('active');
       $('#edit-tab').hide();
-      return $('#types-form').showForm();
+      $('#types-form').showForm();
+      return $('#forms').show();
     };
     $('#add-widget-tab').click(function() {
       return showTypeForm();

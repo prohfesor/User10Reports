@@ -48,22 +48,22 @@
           cssClass: {
             'green': {
               '@status': function(status) {
-                return status === 'good';
+                return status === 'green';
               }
             },
             'yellow': {
               '@status': function(status) {
-                return status === 'warning';
+                return status === 'yellow';
               }
             },
             'red': {
               '@status': function(status) {
-                return status === 'negative';
+                return status === 'red';
               }
             },
             'grey': {
               '@status': function(status) {
-                return status === 'neutral';
+                return status === 'grey';
               }
             }
           }
