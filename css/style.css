@@ -256,6 +256,7 @@ h1, .reports-list .report .name {
   height: 200px;
   float: left;
   text-align: center;
+  cursor: pointer;
 
   background-color: #F2F2F2;
   background-image: -webkit-gradient(linear, right top, left bottom, from(0, #E5E5E5), to(0.4, #F2F2F2));
@@ -334,7 +335,7 @@ h1, .reports-list .report .name {
   height: 30px;
   background: url(../img/plus-blk.png) 7px 7px no-repeat #D0D0D0;
   display: block;
-  margin: 20px auto 0;
+  margin: 0 auto 0;
 }
 
 .edit-blocks .with-list {
@@ -577,7 +578,7 @@ h1, .reports-list .report .name {
 }
 .side-block .form-block .input-block textarea {
   resize: none;
-  height: 60px;
+  height: 78px;
 }
 
 
