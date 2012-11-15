@@ -107,7 +107,7 @@
             <label>Reporting for date range:</label>
 
             <div class="input-block date with-icon">
-                <input type="text" id="report-date" readonly/>
+                <input type="text" class="calendar" id="report-date" readonly/>
                 <input type="hidden" name="date_from" id="date_from"/>
                 <input type="hidden" name="date_to" id="date_to"/>
             </div>
