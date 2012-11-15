@@ -63,4 +63,40 @@ class Report
         }
     }
 
+
+    public static function create($object){
+        $db = flyDb::getInstance();
+        //get user by email
+        $user_id = User::idByEmail($object->email);
+        //save report
+        $q = "INSERT INTO `report` (`name`, `user_id`, `date_from`, `date_to`) VALUES
+                (".flySqlUtil::prepareString($object->name).",
+                 ".(int)$user_id.",
+                 ".flySqlUtil::prepareString($object->date_from).",
+                 ".flySqlUtil::prepareString($object->date_to).")";
+        $db->exec($q);
+        $i = $db->last_insert_id;
+        //save blocks
+        foreach($object->blocks as $position=>$block){
+            $q = "INSERT INTO `block` (`report_id`, `type`, `position`) VALUES (
+                    ".(int)$i.",
+                    ".flySqlUtil::prepareString($block->type).",
+                    ".(int)$position.")";
+            $db->exec($q);
+            $block->id = $db->last_insert_id;
+            //save blocks data
+            foreach($block as $key=>$value){
+                if($key=="report_id" || $key=="type"){
+                    continue;
+                }
+                $q = "INSERT INTO `block_data` (`block_id`, `key`, `value`) VALUES (
+                    ".(int)$block->id.",
+                    ".flySqlUtil::prepareString($key).",
+                    ".flySqlUtil::prepareString($value).")";
+                $db->exec($q);
+            }
+        }
+        return self::find($i);
+    }
+
 }
