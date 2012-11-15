@@ -195,22 +195,22 @@ button                         { color: #fff; padding: 0; border: 0; }
 /*----------------------------------------------------------------------------------*/
 /*-----------------------------------> Edit page <----------------------------------*/
 /*----------------------------------------------------------------------------------*/
-h1 {
+h1, .reports-list .report .name {
   font-size: 15px;
   font-weight: normal;
 }
-.edit-page h1 {
-  padding: 30px 0 0 22px;
+.main h1, .reports-list .report.empty .name {
+  padding: 32px 0 0 22px;
 }
-.edit-page .caption {
+.main .caption, .reports-list .report {
   background: #FFF;
   height: 80px;
   border: 1px solid #F2F2F2;
 }
-.edit-page .with-date h1 {
+.main .with-date h1, .reports-list .report .name {
   padding: 22px 0 0 22px;
 }
-.edit-page .with-date .date {
+.main .with-date .date, .reports-list .report .date {
   display: block;
   color: #999;
   font-size: 10px;
@@ -666,3 +666,58 @@ h1 {
   font-size: 9px;
   color: #999;
 }
+/*----------------------------------------------------------------------------------*/
+/*-----------------------------------> List page <----------------------------------*/
+/*----------------------------------------------------------------------------------*/
+.list-page {
+  width: 600px;
+}
+.reports-list {
+  border: 10px solid #E4E4E4;
+}
+.reports-list .name, .reports-list .date, .reports-list .view {
+  display: block;
+}
+.reports-list .report {
+  border: 0;
+  border-bottom: 1px solid #E4E4E4;
+  overflow: hidden;
+}
+.reports-list .view {
+  display: block;
+  float: right;
+  width: 59px;
+  height: 44px;
+  text-align: center;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-size: 9px;
+  color: #999;
+  background: url(../img/mag-glass-blk.png) 22px 32px no-repeat #E4E4E4;
+  margin: 10px;
+  padding: 15px 0 0;
+}
+.pagination {
+  padding: 0 10px 0 19px;
+}
+.pagination a {
+  display: block;
+  float: left;
+  width: 31px;
+  height: 31px;
+  margin: 0 9px 0 0;
+}
+.pagination .left {
+  background: url(../img/arrow-left-blk.png) 7px 7px no-repeat #E4E4E4;
+}
+.pagination .right {
+  background: url(../img/arrow-right-blk.png) 8px 7px no-repeat #E4E4E4;
+}
+.pagination .add {
+  background: url(../img/plus-blk.png) 8px 8px no-repeat #E4E4E4;
+  float: right;
+}
+
+/*----------------------------------------------------------------------------------*/
+/*------------------------------------> Sidebar <-----------------------------------*/
+/*----------------------------------------------------------------------------------*/
