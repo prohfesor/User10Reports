@@ -22,7 +22,7 @@
           form.find('button').prop('disabled', false);
           if (result.status === 'Success') {
             alert('Your report is created and published');
-            return location.href = '/';
+            return location.href = '/view/'+result.object.id+'/';
           } else {
             return alert(result.content);
           }

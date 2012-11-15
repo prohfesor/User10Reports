@@ -84,6 +84,14 @@ class Report
                     ".(int)$position.")";
             $db->exec($q);
             $block->id = $db->last_insert_id;
+            //fix list
+            if(is_array($block->list)){
+                foreach($block->list as $k=>$list_item){
+                    $line = 'line'.$k;
+                    $block->$line = $list_item;
+                }
+                unset($block->list);
+            }
             //save blocks data
             foreach($block as $key=>$value){
                 if($key=="report_id" || $key=="type"){

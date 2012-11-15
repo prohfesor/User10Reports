@@ -6,9 +6,6 @@
       items: "> li.widget"
     });
     $("#editor").disableSelection();
-    $('#add-widget').click(function() {
-      return $('#types-form').showForm();
-    });
     $('#about-form').showForm();
     window.widgetMap = {
       custom: {

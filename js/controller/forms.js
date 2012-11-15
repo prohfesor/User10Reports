@@ -86,8 +86,12 @@
       return false;
     });
     $('#forms .delete-data').click(function() {
-      $(this).closest('.side-block').getFormModel().$node.remove();
-      $('#types-form').showForm();
+      var widget;
+      widget = $(this).closest('.side-block').getFormModel();
+      if (widget) {
+        widget.$node.remove();
+      }
+      showTypeForm();
       return false;
     });
     $('.side-block li').has(':radio').click(function() {

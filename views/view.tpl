@@ -21,6 +21,15 @@
             </div>
 
             <ul class="mail-list">
+                <li>
+                    <div class="photo-block">
+                        <img src="" />
+                    </div>
+                    <div class="info-block">
+                        <span class="mail">{$report->user->email}</span>
+                        <span class="hint">Created {$report->created|date_format:"%b %e, %Y"}</span>
+                    </div>
+                </li>
                 {foreach from=$report->share item=email}
                 <li>
                     <div class="photo-block">
@@ -28,7 +37,7 @@
                     </div>
                     <div class="info-block">
                         <span class="mail">{$email->email}</span>
-                        <span class="hint">Created {$email->created|date_format:"%b %e, %Y"}</span>
+                        <span class="hint">Sent {$email->created|date_format:"%b %e, %Y"}</span>
                     </div>
                 </li>
                 {/foreach}
