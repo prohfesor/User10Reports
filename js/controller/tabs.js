@@ -2,7 +2,6 @@
 (function() {
 
   jQuery(function($) {
-    var showTypeForm;
     $('#edit-tab, #share-tab').hide();
     $('#toggle-tab').click(function() {
       var $this;
@@ -17,7 +16,7 @@
     $('#about-tab').click(function() {
       return $('#about-form').showForm();
     });
-    showTypeForm = function() {
+    window.showTypeForm = function() {
       $('#toggle-tab').removeClass('close').addClass('switch');
       $('#about-tab').show();
       $('#add-widget-tab').show().addClass('active');
