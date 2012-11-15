@@ -557,8 +557,14 @@ h1, .reports-list .report .name {
 .side-block .form-block .chars {
   float: right;
 }
+.side-block .form-block .chars.red {
+  color: red;
+}
 .side-block .form-block .chars span {
   color: #333;
+}
+.side-block .form-block .chars.red span {
+  color: red;
 }
 .side-block .form-block .input-block textarea {
   resize: none;

@@ -4,34 +4,11 @@
   jQuery(function($) {
     var form;
     return form = $('#about-form form').submit(function() {
-      var data, formData, widget, _i, _len;
-      formData = form.getFormData();
-      data = {
-        name: formData.name,
-        email: formData.email,
-        blocks: []
-      };
-      for (_i = 0, _len = WidgetList.length; _i < _len; _i++) {
-        widget = WidgetList[_i];
-        data.blocks.push(widget.get());
-      }
-      form.find('button').prop('disabled', true);
-      $.ajax({
-        url: '/create/',
-        data: {
-          report: JSON.stringify(data)
-        },
-        type: 'POST',
-        dataType: 'JSON',
-        success: function(result) {
-          form.find('button').prop('disabled', false);
-          if (result.status === 'Success') {
-            alert('Your report is created and published');
-            return location.href = '/';
-          } else {
-            return alert(result.content);
-          }
-        }
+      var data;
+      data = form.getFormData();
+      data.blocks = [];
+      $('#editor > .widget').each(function() {
+        return data.blocks.push($(this).data('model').get());
       });
       return false;
     });

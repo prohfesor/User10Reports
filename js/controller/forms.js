@@ -66,7 +66,7 @@
       return this.trigger('clearForm');
     };
     $('#forms form').submit(function() {
-      var $this, addBtn, className, coord, data, newAddBtn, view, widget;
+      var $this, className, data, view, widget;
       $this = $(this);
       className = $this.closest('.side-block').attr('id').replace('-form', '');
       if (!(className in widgetMap)) {
@@ -79,24 +79,26 @@
         widget = new widgetMap[className].model(data);
         view = new widgetMap[className].view(widget);
         widget.$node = view.getHtml();
+        widget.$node.data('model', widget);
         $this.setFormModel(widget);
-        WidgetList.push(widget);
-        addBtn = $('#add-widget');
-        coord = addBtn.coords().grid;
-        newAddBtn = addBtn.hide().clone();
-        widget.set(coord);
-        Editor.remove_widget(addBtn, function() {
-          Editor.add_widget(view.getHtml(), 1, 1, coord.col, coord.row);
-          return Editor.add_widget(newAddBtn, 1, 1, coord.col + 1, coord.row);
-        });
+        $('#add-widget').before(widget.$node);
       }
       return false;
     });
-    $('#forms form .cancel').click(function() {
-      return $('#types-form').showForm();
+    $('#forms .delete-data').click(function() {
+      $(this).closest('.side-block').getFormModel().$node.remove();
+      $('#types-form').showForm();
+      return false;
     });
-    return $('.side-block li').has(':radio').click(function() {
+    $('.side-block li').has(':radio').click(function() {
       return $(this).find(':radio').prop('checked', true).trigger('change');
+    });
+    return $('#forms form').has('.chars').find('textarea').keyup(function() {
+      var inp;
+      inp = $(this).closest('form').find('.chars span');
+      inp.html(inp.data('max') - this.value.length);
+      inp.parent().toggleClass('red', inp.data('max') - this.value.length === 0);
+      return null;
     });
   });
 
