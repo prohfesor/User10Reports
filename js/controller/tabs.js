@@ -2,16 +2,13 @@
 (function() {
 
   jQuery(function($) {
+    var showTypeForm;
     $('#edit-tab, #share-tab').hide();
     $('#toggle-tab').click(function() {
       var $this;
       $this = $(this);
       if ($this.hasClass('close')) {
-        $this.toggleClass('switch close');
-        $('#about-tab').show();
-        $('#add-widget-tab').show().addClass('active');
-        $('#edit-tab').hide();
-        return $('#types-form').showForm();
+        return showTypeForm();
       } else {
         $('#forms').toggle();
         return $(this).toggleClass('active');
@@ -20,8 +17,18 @@
     $('#about-tab').click(function() {
       return $('#about-form').showForm();
     });
-    $('#add-widget-tab').click(function() {
+    showTypeForm = function() {
+      $('#toggle-tab').removeClass('close').addClass('switch');
+      $('#about-tab').show();
+      $('#add-widget-tab').show().addClass('active');
+      $('#edit-tab').hide();
       return $('#types-form').showForm();
+    };
+    $('#add-widget-tab').click(function() {
+      return showTypeForm();
+    });
+    $('#add-widget').click(function() {
+      return showTypeForm();
     });
     $('#tabs .button').click(function() {
       $(this).closest('ul').find('.button').removeClass('active');
