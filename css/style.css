@@ -334,7 +334,7 @@ h1, .reports-list .report .name {
   height: 30px;
   background: url(../img/plus-blk.png) 7px 7px no-repeat #D0D0D0;
   display: block;
-  margin: 0 auto 0;
+  margin: 0 auto;
 }
 
 .edit-blocks .with-list {
@@ -581,11 +581,21 @@ h1, .reports-list .report .name {
 }
 
 
+.side-block .form-block .digit li {
+  padding: 6px 0 6px 13px;  
+}
 .side-block .form-block .square li {
   list-style: square inside;  
   font-size: 28px;
+  position: relative;
+  padding: 6px 0 7px 14px;
 }
-
+.side-block .form-block .square .square-inside {
+  position: absolute;
+  left: 31px;
+  top: 5px;
+  width: 247px;
+}
 
 .side-block .form-block .square li.active, .side-block .form-block .digit li.active {
   background: #FFF;
@@ -593,7 +603,6 @@ h1, .reports-list .report .name {
 .side-block .form-block .square li, .side-block .form-block .digit li {
   color: #CCC;
   line-height: 20px;
-  padding: 6px 0 6px 13px;
   border-bottom: 1px solid #E4E4E4;
 }
 .side-block .form-block .square li:last-child,
@@ -608,6 +617,9 @@ h1, .reports-list .report .name {
   margin: -3px 0 0 5px;
   padding: 3px 0 3px 11px;
   border-left: 1px dotted #CCC;
+}
+.side-block .form-block .square .text {
+  margin-top: -2px;
 }
 
 .side-block .form-block .colored li {
@@ -630,9 +642,11 @@ h1, .reports-list .report .name {
 .side-block .form-block .choose-type li span {
   color: #AAA;
 }
+/*
 .side-block .form-block .choose-type .square span {
   margin-left: -3px;
 }
+*/
 .side-block .form-block .choose-type .square {
   border-bottom: 1px solid #E4E4E4;
 }
