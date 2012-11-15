@@ -1,25 +1,32 @@
 {include "_header.tpl"}
 
+<div class="wrap list-page">
+    <div class="main">
 
-<h1>Reports</h1>
+    <div class="caption">
+        <h1>Reports</h1>
+    </div>
 
-<ul id="reports">
-{foreach from=$reports item=report}
-    <li class="report-item">
-        <span>{$report->name}</span>
-        <br>
-        <span class="date">{$report->date_from|date_format:"%b, %e, %Y"} - {$report->date_to|date_format:"%b, %e, %Y"}</span>
-        <br>
-        <a href="/view/{$report->id}/">View</a>
-        <br><br>
-    </li>
-{foreachelse}
+    <ul class="reports-list">
+    {foreach from=$reports item=report}
+        <li class="report">
+            <a href="/view/{$report->id}/" class="view">view</a>
+            <span class="name">{$report->name}</span>
+            <span class="date">{$report->date_from|date_format:"%b, %e, %Y"} - {$report->date_to|date_format:"%b, %e, %Y"}</span>
+        </li>
+        {foreachelse}
 
-    <li class="noreports">
-    - sorry, no reports yet -
-    </li>
-{/foreach}
-</ul>
+        <li class="report empty">
+            <span class="name">There is no reports currently</span>
+        </li>
+    {/foreach}
+    </ul>
+
+    <div class="pagination">
+        <a href="/add" class="add"></a>
+        <a href="/" class="left"></a>
+        <a href="/" class="right"></a>
+    </div>
 
 
 {include "_footer.tpl"}
