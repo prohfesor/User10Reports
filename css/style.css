@@ -804,23 +804,8 @@ h1, .reports-list .report .name {
   height: 100%;
 }
 
-.reports-list .report a:hover {
-  background-color: #FDFDFD;
-  background-image: -webkit-gradient(linear, left bottom, left top, from(0, #F5F5F5), to(0.4, #FDFDFD));
-  background-image: -webkit-linear-gradient(bottom, #F5F5F5 0%, #FDFDFD 40%);
-  background-image: -moz-linear-gradient(bottom, #F5F5F5 0%, #FDFDFD 40%);
-  background-image: -ms-linear-gradient(bottom, #F5F5F5 0%, #FDFDFD 40%);
-  background-image: -o-linear-gradient(bottom, #F5F5F5 0%, #FDFDFD 40%);
-  background-image: linear-gradient(bottom, #F5F5F5 0%, #FDFDFD 40%);    
-}
-.reports-list .report a:active {
-  background-color: #FDFDFD;
-  background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0, #ECECEC), color-stop(0.45, #FAFAFA), color-stop(0.55, #FAFAFA), color-stop(1, #ECECEC));
-  background-image: -webkit-linear-gradient(bottom, #ECECEC 0%, #FAFAFA 45%, #FAFAFA 55%, #ECECEC 100%);
-  background-image: -moz-linear-gradient(bottom, #ECECEC 0%, #FAFAFA 45%, #FAFAFA 55%, #ECECEC 100%);
-  background-image: -ms-linear-gradient(bottom, #ECECEC 0%, #FAFAFA 45%, #FAFAFA 55%, #ECECEC 100%);
-  background-image: -o-linear-gradient(bottom, #ECECEC 0%, #FAFAFA 45%, #FAFAFA 55%, #ECECEC 100%);
-  background-image: linear-gradient(bottom, #ECECEC 0%, #FAFAFA 45%, #FAFAFA 55%, #ECECEC 100%);    
+.reports-list .report a:hover .name {
+  color: #0C9;
 }
 
 

@@ -202,8 +202,8 @@
 
             <div class="input-block">
                 <ul class="square marked-list" id="form-list" data-max="5">
-                    <li><input type="text" name="list[]" class="text"/></li>
-                    <li class="add-item"><input type="text" id="add-list-item" class="text" placeholder="Add Item..."/>
+                    <li><div class="square-inside"><input type="text" name="list[]" class="text"/></div></li>
+                    <li class="add-item"><div class="square-inside"><input type="text" id="add-list-item" class="text" placeholder="Add Item..."/></div>
                     </li>
                 </ul>
             </div>
