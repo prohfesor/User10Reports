@@ -39,7 +39,7 @@
 
 <ul class="buttons-block">
     <li class="first switch active"><a href="#sidebar"></a></li>
-    <li class="button share"><a href="#share">Share</a></li>
+    <li class="button share"><a href="#sidebar">Share</a></li>
 </ul>
 
 </div> <!-- /Sidebar -->
