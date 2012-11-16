@@ -272,9 +272,7 @@
             <div class="input-block">
                 <input type="text" name="name"/>
             </div>
-
-            <label>Status type:</label>
-            <div class="input-block">
+            <div class="input-block drop-down">
                 <ul class="square colored marked-list">
                     <li class="green active">
                         <input type="radio" name="status" value="green" checked/>

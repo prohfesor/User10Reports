@@ -539,6 +539,17 @@ h1, .reports-list .report .name {
   height: 40px;
   float: right;
 }
+.side-block .form-block .input-block.drop-down {
+  position: relative;
+  height: 0;
+  border-width: 0;
+}
+.side-block .form-block .input-block.drop-down > ul {
+  position: absolute;
+  background: #F2F2F2;
+  width: 278px;
+  border: 1px solid #E4E4E4;
+}
 
 
 .side-block .form-block .upload-link {
