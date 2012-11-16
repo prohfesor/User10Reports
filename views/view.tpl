@@ -9,10 +9,11 @@
         <div class="side-caption"><h2>Share</h2></div>
         <div class="form-block side-list">
             <div class="add-block">
-                <form>
+                <form action="/share/" method="post">
                     <div class="input-block with-icon add-mail">
-                        <button class="icon"></button>
-                        <input type="text" placeholder="recipient@email.com" />
+                            <input type="submit" class="icon" value="" />
+                            <input type="hidden" name="id" value="{$report->id}" />
+                            <input type="text" name="email" placeholder="recipient@email.com" />
                     </div>
                 </form>
                 {if !empty($report->link)}
