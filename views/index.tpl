@@ -10,9 +10,11 @@
     <ul class="reports-list">
     {foreach from=$reports item=report}
         <li class="report">
-            <a href="/view/{$report->id}/" class="view">view</a>
-            <span class="name">{$report->name}</span>
-            <span class="date">{$report->date_from|date_format:"%b, %e, %Y"} - {$report->date_to|date_format:"%b, %e, %Y"}</span>
+            <a href="/view/{$report->id}/">
+                <span class="view">view</span>
+                <span class="name">{$report->name}</span>
+                <span class="date">{$report->date_from|date_format:"%b, %e, %Y"} - {$report->date_to|date_format:"%b, %e, %Y"}</span>
+            </a>
         </li>
         {foreachelse}
 
