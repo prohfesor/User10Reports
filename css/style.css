@@ -777,6 +777,10 @@ h1, .reports-list .report .name {
   overflow: hidden;
   padding: 9px;
   border-bottom: 1px solid #E4E4E4;
+  cursor: pointer;
+}
+.side-block .side-list li:hover {
+  background: #f8f8f8;
 }
 .side-block .side-list .photo-block {
   width: 31px;
