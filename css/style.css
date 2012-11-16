@@ -635,10 +635,22 @@ h1, .reports-list .report .name {
 
 .side-block .form-block .colored li {
   font-size: 42px;
+  position: relative;
+  display: block;
+  padding-left: 38px;
 }
-.side-block .form-block .colored .red     { color: #F33; }
-.side-block .form-block .colored .green   { color: #6C0; }
-.side-block .form-block .colored .yellow  { color: #FC0; }
+.side-block .form-block .colored .choose-color {
+  display: block;
+  width: 16px;
+  height: 16px;
+  position: absolute;
+  left: 14px;
+  top: 10px;
+}
+.side-block .form-block .colored .red .choose-color    { background: #F33; }
+.side-block .form-block .colored .green .choose-color  { background: #6C0; }
+.side-block .form-block .colored .yellow .choose-color { background: #FC0; }
+.side-block .form-block .colored .grey .choose-color   { background: #CCC; }
 
 .side-block .form-block .colored li span    { color: #333; }
 
