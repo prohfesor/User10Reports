@@ -540,6 +540,7 @@ h1, .reports-list .report .name {
   float: right;
 }
 .side-block .form-block .input-block.drop-down {
+  display: none;
   position: relative;
   height: 0;
   border-width: 0;
@@ -550,6 +551,9 @@ h1, .reports-list .report .name {
   width: 278px;
   border: 1px solid #E4E4E4;
 }
+.side-block .form-block .input-block.drop-down > ul > li {
+  height: 26px;
+}
 .side-block .form-block .input-block.drop-down > ul > li:hover {
   background: #f8f8f8;
   cursor: pointer;
@@ -559,6 +563,9 @@ h1, .reports-list .report .name {
 }
 .side-block .form-block .input-block.drop-down > ul > li input {
   display: none;
+}
+.side-block .form-block .input-block.drop-down > ul > li .text {
+    margin-top: 0;
 }
 
 
@@ -648,7 +655,6 @@ h1, .reports-list .report .name {
   display: inline-block;
   margin: -3px 0 0 5px;
   padding: 3px 0 3px 11px;
-  border-left: 1px dotted #CCC;
 }
 .side-block .form-block .square .text {
   margin-top: -5px;
@@ -661,8 +667,8 @@ h1, .reports-list .report .name {
   top: 12px !important;
 }
 .side-block .form-block .choose-color .text {
-  width: 222px;
-  padding-left: 47px;
+    padding-left: 55px;
+    width: 214px;
 }
 .side-block .form-block .colored li {
   font-size: 42px;
@@ -670,6 +676,17 @@ h1, .reports-list .report .name {
   display: block;
   padding-left: 38px;
 }
+
+.side-block .form-block .dotted {
+  position: absolute;
+  display: block;
+  width:  43px;
+  height: 30px;
+  border-right: 1px dotted #CCCCCC;
+  top: 5px;
+  left: 0;
+}
+
 .side-block .form-block .colored .color,
 .side-block .form-block .choose-color .color {
   display: block;
@@ -680,16 +697,16 @@ h1, .reports-list .report .name {
   top: 10px;
 }
 .side-block .form-block .colored .red .color,
-.side-block .form-block .choose-color.red .color { background: #F33; }
+.side-block .form-block .choose-color .color.red { background: #F33; }
 
 .side-block .form-block .colored .green .color,
-.side-block .form-block .choose-color.green .color { background: #6C0; }
+.side-block .form-block .choose-color .color.green { background: #6C0; }
 
 .side-block .form-block .colored .yellow .color,
-.side-block .form-block .choose-color.yellow .color { background: #FC0; }
+.side-block .form-block .choose-color .color.yellow { background: #FC0; }
 
 .side-block .form-block .colored .grey .color,
-.side-block .form-block .choose-color.grey .color { background: #CCC; }
+.side-block .form-block .choose-color .color.grey { background: #CCC; }
 
 .side-block .form-block .colored li span    { color: #333; }
 

@@ -29,6 +29,7 @@
     <script src="/js/controller/forms.js"></script>
     <script src="/js/controller/list-form.js"></script>
     <script src="/js/controller/image-form.js"></script>
+    <script src="/js/controller/status-form.js"></script>
     <script src="/js/controller/save-report.js"></script>
     <script src="/js/controller/about-form.js"></script>
     <script src="/js/controller/app.js"></script>
@@ -269,30 +270,36 @@
     <div class="form-block">
         <form>
             <label>Status name:</label>
-            <div class="input-block">
-                <input type="text" name="name"/>
+            <div class="input-block choose-color">
+                <span class="dotted"></span>
+                <a href="#" class="color green"></a>
+                <input type="text" class="text" name="name" />
             </div>
             <div class="input-block drop-down">
                 <ul class="square colored marked-list">
                     <li class="green active">
-                        <span class="choose-color"></span>
-                        <input type="radio" name="status" value="green" checked/>
+                        <span class="dotted"></span>
+                        <span class="color"></span>
                         <span class="text">Good</span>
+                        <input type="radio" name="status" value="green" checked/>
                     </li>
                     <li class="yellow">
-                        <span class="choose-color"></span>
-                        <input type="radio" name="status" value="yellow"/>
+                        <span class="dotted"></span>
+                        <span class="color"></span>
                         <span class="text">Warning</span>
+                        <input type="radio" name="status" value="yellow"/>
                     </li>
                     <li class="red">
-                        <span class="choose-color"></span>
-                        <input type="radio" name="status" value="red"/>
+                        <span class="dotted"></span>
+                        <span class="color"></span>
                         <span class="text">Negative</span>
+                        <input type="radio" name="status" value="red"/>
                     </li>
                     <li class="grey">
-                        <span class="choose-color"></span>
-                        <input type="radio" name="status" value="grey"/>
+                        <span class="dotted"></span>
+                        <span class="color"></span>
                         <span class="text">Neutral</span>
+                        <input type="radio" name="status" value="grey"/>
                     </li>
                 </ul>
             </div>
