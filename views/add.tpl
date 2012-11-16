@@ -275,18 +275,22 @@
             <div class="input-block drop-down">
                 <ul class="square colored marked-list">
                     <li class="green active">
+                        <span class="choose-color"></span>
                         <input type="radio" name="status" value="green" checked/>
                         <span class="text">Good</span>
                     </li>
                     <li class="yellow">
+                        <span class="choose-color"></span>
                         <input type="radio" name="status" value="yellow"/>
                         <span class="text">Warning</span>
                     </li>
                     <li class="red">
+                        <span class="choose-color"></span>
                         <input type="radio" name="status" value="red"/>
                         <span class="text">Negative</span>
                     </li>
                     <li class="grey">
+                        <span class="choose-color"></span>
                         <input type="radio" name="status" value="grey"/>
                         <span class="text">Neutral</span>
                     </li>
