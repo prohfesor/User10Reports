@@ -654,13 +654,24 @@ h1, .reports-list .report .name {
   margin-top: -5px;
 }
 
+.side-block .form-block .choose-color {
+  position: relative;
+}
+.side-block .form-block .choose-color .color {
+  top: 12px !important;
+}
+.side-block .form-block .choose-color .text {
+  width: 222px;
+  padding-left: 47px;
+}
 .side-block .form-block .colored li {
   font-size: 42px;
   position: relative;
   display: block;
   padding-left: 38px;
 }
-.side-block .form-block .colored .choose-color {
+.side-block .form-block .colored .color,
+.side-block .form-block .choose-color .color {
   display: block;
   width: 16px;
   height: 16px;
@@ -668,10 +679,17 @@ h1, .reports-list .report .name {
   left: 14px;
   top: 10px;
 }
-.side-block .form-block .colored .red .choose-color    { background: #F33; }
-.side-block .form-block .colored .green .choose-color  { background: #6C0; }
-.side-block .form-block .colored .yellow .choose-color { background: #FC0; }
-.side-block .form-block .colored .grey .choose-color   { background: #CCC; }
+.side-block .form-block .colored .red .color,
+.side-block .form-block .choose-color.red .color { background: #F33; }
+
+.side-block .form-block .colored .green .color,
+.side-block .form-block .choose-color.green .color { background: #6C0; }
+
+.side-block .form-block .colored .yellow .color,
+.side-block .form-block .choose-color.yellow .color { background: #FC0; }
+
+.side-block .form-block .colored .grey .color,
+.side-block .form-block .choose-color.grey .color { background: #CCC; }
 
 .side-block .form-block .colored li span    { color: #333; }
 
