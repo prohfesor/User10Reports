@@ -523,7 +523,11 @@ h1, .reports-list .report .name {
 }
 .side-block .form-block .with-icon .calendar {
   width: 260px;
-  background: url(../img/calendar-blk.png) no-repeat  right 12px bottom 12px;
+  background-image: url(../img/calendar-blk.png);
+  background-repeat: no-repeat;
+  background-position: right 12px bottom 12px;
+  background-position-x: 250px;
+  background-position-y: 11px;
   cursor: pointer;
 }
 .side-block .form-block .add-mail .icon {
@@ -559,7 +563,12 @@ h1, .reports-list .report .name {
   cursor: pointer;
 }
 .side-block .form-block .input-block.drop-down > ul > li.active {
-  background: #FFF url(../img/check-blk.png) right 8px top 8px no-repeat;
+  background-color: #FFF;
+  background-image: url(../img/check-blk.png);
+  background-repeat: no-repeat;
+  background-position: right 8px top 10px;
+  background-position-x: 250px;
+  background-position-y: 11px;
 }
 .side-block .form-block .input-block.drop-down > ul > li input {
   display: none;
