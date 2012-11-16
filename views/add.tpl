@@ -128,20 +128,17 @@
     <div class="side-caption"><h2>Edit data</h2></div>
     <div class="form-block">
         <form>
-            <label>Data:</label>
-
-            <div class="input-block big-font">
-                <input type="text" name="data"/>
-            </div>
-
             <label>Data Name:</label>
-
             <div class="input-block">
                 <input type="text" name="name" placeholder="Social Media Marketing Report"/>
             </div>
 
-            <label>Data source(s):</label>
+            <label>Data:</label>
+            <div class="input-block big-font">
+                <input type="text" name="data"/>
+            </div>
 
+            <label>Data source(s):</label>
             <div class="input-block">
                 <input type="text" name="source" placeholder="Optional"/>
             </div>
@@ -271,20 +268,12 @@
     <div class="side-caption"><h2>Edit data</h2></div>
     <div class="form-block">
         <form>
-            <label>Status:</label>
-
-            <div class="input-block big-font">
-                <input type="text" name="title"/>
-            </div>
-
             <label>Status name:</label>
-
             <div class="input-block">
                 <input type="text" name="name"/>
             </div>
 
             <label>Status type:</label>
-
             <div class="input-block">
                 <ul class="square colored marked-list">
                     <li class="green active">
@@ -306,8 +295,12 @@
                 </ul>
             </div>
 
-            <label>Data source(s):</label>
+            <label>Status:</label>
+            <div class="input-block big-font">
+                <input type="text" name="title"/>
+            </div>
 
+            <label>Data source(s):</label>
             <div class="input-block">
                 <input type="text" name="source" placeholder="Optional"/>
             </div>
