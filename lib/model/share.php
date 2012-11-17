@@ -27,4 +27,13 @@ class Share
         return $result;
     }
 
+
+    public static function addShare($id, $email)
+    {
+        $db = flyDb::getInstance();
+        $q = "INSERT INTO `report_share` SET email=".flySqlUtil::prepareString($email).", report_id=".(int)$id;
+        $result = $db->exec($q);
+        return $result;
+    }
+
 }

@@ -13,8 +13,15 @@ if(!flyValidate::isEmail($email)){
 
 $mailer = new flyMail();
 $mailer->type = "html";
-$body = $smarty->fetch('mail.tpl');
+
 $subject = "Likely Reports";
-$mailer->send( $email, $subject, $body );
+$smarty->assign("report", $report);
+$body = $smarty->fetch('mail.tpl');
+
+$sent = $mailer->send( $email, $subject, $body );
+
+if($sent){
+    Share::addShare( $report->id , $email );
+}
 
 $env->redirect("/view/{$report->id}/");

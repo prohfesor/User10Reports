@@ -14,14 +14,14 @@ $db->connect('localhost', DB_USER, DB_PASS, DB_NAME);
 //smarty
 require_once('lib/vendor/smarty/Smarty.class.php');
 $smarty = new Smarty();
-//$smarty->debugging = true;
+$smarty->debugging = true;
 $smarty->template_dir = DIR_ROOT."/views/";
 $smarty->compile_dir = DIR_ROOT."/cache/smarty/templates/";
 $smarty->config_dir = DIR_ROOT.'/configs/';
 $smarty->cache_dir = DIR_ROOT."/cache/smarty/";
 
 //url shortener
-require_once('lib/vendor/isgd/isgd.php');
+require_once('lib/vendor/google/shortener.php'); //require_once('lib/vendor/isgd/isgd.php');
 
 //models
 require_once('lib/model/report.php');

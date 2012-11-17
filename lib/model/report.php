@@ -53,12 +53,12 @@ class Report
     public static function getShortlink($id)
     {
         $db = flyDb::getInstance();
-        $url = 'http://'.$_SERVER['SERVER_NAME']."/view/".$id."/";
-        $lnk = vgdShorten( $url );
-        if(!empty($lnk['shortURL'])){
-            $q = "UPDATE `report` SET link=".flySqlUtil::prepareString($lnk['shortURL'])." WHERE id=".(int)$id;
+        $url = 'http://'.$_SERVER['SERVER_NAME']."/view/".(int)$id."/";
+        $lnk = google_shortener($url); //vgdShorten( $url );
+        if(!empty($lnk)){
+            $q = "UPDATE `report` SET link=".flySqlUtil::prepareString($lnk)." WHERE id=".(int)$id;
             $db->exec($q);
-            return $lnk['shortURL'];
+            return $lnk;
         } else {
             return false;
         }
