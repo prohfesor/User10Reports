@@ -200,15 +200,11 @@
 
             <div class="input-block">
                 <ul class="square marked-list" id="form-list" data-max="5">
-                    <li><div class="square-inside"><input type="text" name="list[]" class="text"/></div></li>
-                    <li class="add-item"><div class="square-inside"><input type="text" id="add-list-item" class="text" placeholder="Add Item..."/></div>
-                    </li>
+                    <li><div class="square-inside"><input type="text" name="list[]" class="text" placeholder="Add Item..."/></div></li>
                 </ul>
             </div>
 
-            <label>Type:</label>
-
-            <div class="input-block choose-type">
+            <div class="input-block choose-type radio-list" id="list-type">
                 <ul class="square marked-list">
                     <li class="active">
                         <div class="square-inside">
@@ -275,7 +271,7 @@
                 <a href="#" class="color green"></a>
                 <input type="text" class="text" name="name" />
             </div>
-            <div class="input-block drop-down">
+            <div class="input-block drop-down radio-list">
                 <ul class="square colored marked-list">
                     <li class="green active">
                         <span class="dotted"></span>

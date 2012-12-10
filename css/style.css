@@ -558,11 +558,11 @@ h1, .reports-list .report .name {
 .side-block .form-block .input-block.drop-down > ul > li {
   height: 26px;
 }
-.side-block .form-block .input-block.drop-down > ul > li:hover {
+.side-block .form-block .radio-list > ul > li:hover {
   background: #f8f8f8;
   cursor: pointer;
 }
-.side-block .form-block .input-block.drop-down > ul > li.active {
+.side-block .form-block .radio-list > ul > li.active {
   background-color: #FFF;
   background-image: url(../img/check-blk.png);
   background-repeat: no-repeat;
@@ -570,7 +570,7 @@ h1, .reports-list .report .name {
   background-position-x: 250px;
   background-position-y: 11px;
 }
-.side-block .form-block .input-block.drop-down > ul > li input {
+.side-block .form-block .radio-list > ul > li input {
   display: none;
 }
 .side-block .form-block .input-block.drop-down > ul > li .text {
