@@ -31,7 +31,7 @@
         if (this.type === 'radio' && this.checked === false) {
           return null;
         }
-        if (this.name.length > 0) {
+        if (this.name.length > 0 && this.value.length > 0) {
           if (this.name.indexOf('[]') > 0) {
             name = this.name.replace('[]', '');
             if (name in data) {
@@ -65,8 +65,20 @@
       this.setFormModel(null);
       return this.trigger('clearForm');
     };
+    window.addWidget = function(className, data) {
+      var view, widget;
+      if (!(className in widgetMap)) {
+        return null;
+      }
+      widget = new widgetMap[className].model(data);
+      view = new widgetMap[className].view(widget);
+      widget.$node = view.getHtml();
+      widget.$node.data('model', widget);
+      $('#add-widget').before(widget.$node);
+      return widget;
+    };
     $('#forms form').submit(function() {
-      var $this, className, data, view, widget;
+      var $this, className, data;
       $this = $(this);
       className = $this.closest('.side-block').attr('id').replace('-form', '');
       if (!(className in widgetMap)) {
@@ -76,13 +88,9 @@
       if ($this.getFormModel()) {
         $this.getFormModel().set(data);
       } else {
-        widget = new widgetMap[className].model(data);
-        view = new widgetMap[className].view(widget);
-        widget.$node = view.getHtml();
-        widget.$node.data('model', widget);
-        $this.setFormModel(widget);
-        $('#add-widget').before(widget.$node);
+        addWidget(className, data);
       }
+      $this.clearForm();
       return false;
     });
     $('#forms .delete-data').click(function() {

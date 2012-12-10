@@ -29,8 +29,16 @@
         view: StatusView
       }
     };
-    return $('*[title]').tipsy({
+    $('*[title]').tipsy({
       gravity: 'n'
+    });
+    addWidget('custom', {
+      data: 'Click',
+      name: 'to edit data block'
+    });
+    return addWidget('custom', {
+      data: 'Drag',
+      name: 'block to re-arrange'
     });
   });
 
