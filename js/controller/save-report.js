@@ -2,9 +2,9 @@
 (function() {
 
   jQuery(function($) {
-    var form;
-    return form = $('#about-form form').submit(function() {
-      var data;
+    return $('#publish').click(function() {
+      var data, form;
+      form = $('#about-form form');
       data = form.getFormData();
       data.blocks = [];
       $('#editor > .widget').each(function() {

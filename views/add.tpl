@@ -126,8 +126,6 @@
             <div class="input-block">
                 <input type="text" name="email" placeholder="youremail@example.com"/>
             </div>
-
-            <button class="btn-green">Publish Report</button>
         </form>
     </div>
 </div>
@@ -152,7 +150,7 @@
                 <input type="text" name="source" placeholder="Optional" />
             </div>
 
-            <button class="btn-green">Save and Continue Editing</button>
+            <button class="btn-green">Save and Add Data</button>
 
             <div class="delete-data"><a href="#">Delete This Data</a></div>
         </form>
@@ -188,7 +186,7 @@
             </div>
             -->
 
-            <button class="btn-green">Save and Continue Editing</button>
+            <button class="btn-green">Save and Add Data</button>
 
             <div class="delete-data"><a href="#">Delete This Data</a></div>
         </form>
@@ -237,7 +235,7 @@
                 <input type="text" name="source" placeholder="Optional"/>
             </div>
 
-            <button class="btn-green">Save and Continue Editing</button>
+            <button class="btn-green">Save and Add Data</button>
 
             <div class="delete-data"><a href="#">Delete This Data</a></div>
         </form>
@@ -263,7 +261,7 @@
                 <input type="text" name="source" placeholder="Forbes Magazine, October 2012"/>
             </div>
 
-            <button class="btn-green">Save and Continue Editing</button>
+            <button class="btn-green">Save and Add Data</button>
 
             <div class="delete-data"><a href="#">Delete This Data</a></div>
         </form>
@@ -320,7 +318,7 @@
                 <input type="text" name="source" placeholder="Optional"/>
             </div>
 
-            <button class="btn-green">Save and Continue Editing</button>
+            <button class="btn-green">Save and Add Data</button>
 
             <div class="delete-data"><a href="#">Delete This Data</a></div>
         </form>
@@ -395,7 +393,7 @@
     -->
 
     <div class="caption with-date">
-        <a href="#" class="btn-green publish-btn">Publish Report</a>
+        <a href="#" class="btn-green publish-btn" id="publish">Publish Report</a>
         <h1>New Report</h1>
         <span class="date"></span>
     </div>
