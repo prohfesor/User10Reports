@@ -5,7 +5,6 @@
 </div>
 
 </div>
-</div>
 </div> <!-- /Content -->
 </div> <!-- /Wrapper -->
 
