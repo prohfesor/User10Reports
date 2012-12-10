@@ -199,7 +199,7 @@ button                         { color: #fff; padding: 0; border: 0; }
 }
 .footer .copy {
   float: right;
-  padding: 0 5px 0 0;
+  padding: 0 15px 0 0;
 }
 .footer .copy, .footer .mail {
   display: block;
@@ -337,7 +337,7 @@ h1, .reports-list .report .name {
 .edit-blocks .add {
   width: 30px;
   height: 30px;
-  background: url(../img/plus-blk.png) 7px 7px no-repeat #D0D0D0;
+  background: url(../img/plus-blk.png) 7px 7px no-repeat #19D0A2;
   display: block;
   margin: 0 auto;
 }
@@ -487,16 +487,33 @@ h1, .reports-list .report .name {
   background: #FBFBFB;
   padding: 0 9px 50px;
 }
-.side-block .form-block .btn-green {
+.side-block .form-block .btn-green, .caption .publish-btn, .caption .delete-btn, .caption .edit-btn {
   font-size: 13px;
   font-weight: bold;
   background: #00CC99;
+  color: #FFF;
   padding: 12px 0 13px;
   margin: 20px 0 0;
   text-align: center;
   display: block;
   width: 100%;
   cursor: pointer;
+  text-decoration: none;
+}
+.caption .publish-btn, .caption .delete-btn, .caption .edit-btn {
+  float: right;
+  margin: 20px 20px 20px 0;
+}
+.caption .delete-btn {
+  width: 70px;
+  background: #F66;
+}
+.caption .edit-btn {
+  width: 70px;
+  background: #0C9;
+}
+.caption .publish-btn {
+  width: 160px;
 }
 .side-block .form-block label, .side-block .form-block .chars {
   color: #999;
@@ -743,20 +760,23 @@ h1, .reports-list .report .name {
 }
 
 
-.side-block .form-block .input-block input::-webkit-input-placeholder,
-.side-block .square input::-webkit-input-placeholder,
-.side-block .digit input::-webkit-input-placeholder {
+.side-block .form-block .input-block ::-webkit-input-placeholder,
+.side-block .square ::-webkit-input-placeholder,
+.side-block .digit ::-webkit-input-placeholder {
   font-style: italic;
+  color: #CCC;
 }
-.side-block .form-block .input-block input:-moz-placeholder,
-.side-block .square input:-moz-placeholder,
-.side-block .digit input:-moz-placeholder {
+.side-block .form-block .input-block :-moz-placeholder,
+.side-block .square :-moz-placeholder,
+.side-block .digit :-moz-placeholder {
   font-style: italic;
+  color: #CCC;
 }
-.side-block .form-block .input-block input:-ms-input-placeholder,
-.side-block .square input:-ms-input-placeholder,
-.side-block .digit input:-ms-input-placeholder {
+.side-block .form-block .input-block :-ms-input-placeholder,
+.side-block .square :-ms-input-placeholder,
+.side-block .digit :-ms-input-placeholder {
   font-style: italic;
+  color: #CCC;
 }
 
 
