@@ -129,19 +129,19 @@
     <div class="side-caption"><h2>Edit data</h2></div>
     <div class="form-block">
         <form>
-            <label>Data Name:</label>
-            <div class="input-block">
-                <input type="text" name="name" placeholder="Social Media Marketing Report"/>
-            </div>
-
             <label>Data:</label>
             <div class="input-block big-font">
-                <input type="text" name="data"/>
+                <input type="text" name="data" placeholder="$117.48" />
+            </div>
+
+            <label>Data Name:</label>
+            <div class="input-block">
+                <input type="text" name="name" placeholder="Revenue per Customer" />
             </div>
 
             <label>Data source(s):</label>
             <div class="input-block">
-                <input type="text" name="source" placeholder="Optional"/>
+                <input type="text" name="source" placeholder="Optional" />
             </div>
 
             <button class="btn-green">Save and Continue Editing</button>
@@ -169,14 +169,16 @@
                 <label>Caption:</label>
             </div>
             <div class="input-block">
-                <textarea name="caption" maxlength="140"></textarea>
+                <textarea name="caption" maxlength="140" placeholder="Optional"></textarea>
             </div>
 
+            <!--
             <label>Data source(s):</label>
 
             <div class="input-block">
                 <input type="text" name="source" placeholder="Optional"/>
             </div>
+            -->
 
             <button class="btn-green">Save and Continue Editing</button>
 
@@ -193,7 +195,7 @@
             <label>List Name:</label>
 
             <div class="input-block">
-                <input type="text" name="name" placeholder="Social Media Marketing Report"/>
+                <input type="text" name="name" placeholder="Top Traffic Sources" />
             </div>
 
             <label>List:</label>
@@ -243,18 +245,18 @@
     <div class="side-caption"><h2>Edit data</h2></div>
     <div class="form-block">
         <form>
-            <label>Quote source:</label>
-
-            <div class="input-block">
-                <input type="text" name="source" placeholder="Forbes Magazine, October 2012"/>
-            </div>
-
             <div class="input-caption">
                 <span class="chars"><span data-max="140">140</span> Characters</span>
                 <label>Quote:</label>
             </div>
             <div class="input-block">
-                <textarea name="quote" maxlength="140"></textarea>
+                <textarea name="quote" maxlength="140" placeholder='"What somebody said or wrote..."'></textarea>
+            </div>
+
+            <label>Quote source:</label>
+
+            <div class="input-block">
+                <input type="text" name="source" placeholder="Forbes Magazine, October 2012"/>
             </div>
 
             <button class="btn-green">Save and Continue Editing</button>
@@ -269,11 +271,16 @@
     <div class="side-caption"><h2>Edit data</h2></div>
     <div class="form-block">
         <form>
+            <label>Status:</label>
+            <div class="input-block big-font">
+                <input type="text" name="title" placeholder="Below" />
+            </div>
+
             <label>Status name:</label>
             <div class="input-block choose-color">
                 <span class="dotted"></span>
                 <a href="#" class="color green"></a>
-                <input type="text" class="text" name="name" />
+                <input type="text" class="text" name="name" placeholder="Budget" />
             </div>
             <div class="input-block drop-down">
                 <ul class="square colored marked-list">
@@ -302,11 +309,6 @@
                         <input type="radio" name="status" value="grey"/>
                     </li>
                 </ul>
-            </div>
-
-            <label>Status:</label>
-            <div class="input-block big-font">
-                <input type="text" name="title"/>
             </div>
 
             <label>Data source(s):</label>
@@ -389,6 +391,7 @@
     -->
 
     <div class="caption with-date">
+        <a href="#" class="btn-green publish-btn">Publish Report</a>
         <h1>New Report</h1>
         <span class="date"></span>
     </div>
