@@ -215,6 +215,12 @@ h1, .reports-list .report .name {
   font-weight: normal;
   color: #333;
 }
+.hidden-sidebar .main {
+  margin: 0 0 0 150px;
+}
+.hidden-sidebar .sidebar {
+  width: 210px;
+}
 .main h1, .reports-list .report.empty .name {
   padding: 32px 0 0 22px;
 }
