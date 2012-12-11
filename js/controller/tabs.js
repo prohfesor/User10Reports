@@ -10,6 +10,7 @@
         return showTypeForm();
       } else {
         $('#forms').toggle();
+        $('.wrap.edit-page').toggleClass('centered-body');
         return $(this).toggleClass('active');
       }
     });
