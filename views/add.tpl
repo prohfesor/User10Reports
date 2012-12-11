@@ -132,7 +132,7 @@
 
 
 <div class="side-block" id="custom-form">
-    <div class="side-caption"><h2>Edit data</h2></div>
+    <div class="side-caption"><h2>Edit Data</h2></div>
     <div class="form-block">
         <form>
             <label>Data:</label>
@@ -159,7 +159,7 @@
 
 
 <div class="side-block" id="image-form">
-    <div class="side-caption"><h2>Edit data</h2></div>
+    <div class="side-caption"><h2>Edit Data</h2></div>
     <div class="form-block">
         <form enctype="multipart/form-data">
             <label>Upload picture:</label>
@@ -195,7 +195,7 @@
 
 
 <div class="side-block" id="list-form">
-    <div class="side-caption"><h2>Edit data</h2></div>
+    <div class="side-caption"><h2>Edit Data</h2></div>
     <div class="form-block">
         <form>
             <label>List Name:</label>
@@ -244,7 +244,7 @@
 
 
 <div class="side-block" id="quote-form">
-    <div class="side-caption"><h2>Edit data</h2></div>
+    <div class="side-caption"><h2>Edit Data</h2></div>
     <div class="form-block">
         <form>
             <div class="input-caption">
@@ -270,7 +270,7 @@
 
 
 <div class="side-block" id="status-form">
-    <div class="side-caption"><h2>Edit data</h2></div>
+    <div class="side-caption"><h2>Edit Data</h2></div>
     <div class="form-block">
         <form>
             <label>Status:</label>
