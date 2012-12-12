@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta charset="utf-8">
-    <title>User10Report</title>
+    <title>Likely Reports</title>
 
     <link rel="stylesheet" type="text/css" href="/css/style.css"/>
     <link rel="stylesheet" href="/css/tipsy.css"/>
