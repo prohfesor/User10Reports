@@ -392,7 +392,7 @@
     </div>
     -->
 
-    <div class="caption with-date">
+    <div class="caption">
         <a href="#" class="btn-green publish-btn" id="publish">Publish Report</a>
         <h1>New Report</h1>
         <span class="date"></span>
