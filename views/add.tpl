@@ -448,7 +448,7 @@
     </li>
 </script>
 <script type="text/html" id="quote-tpl">
-    <li class="widget">
+    <li class="widget with-quote">
         <table><tr><td>
             <p>some text</p>
             <span class="area">John Doe, Beta tester</span>
