@@ -2,7 +2,8 @@
 (function() {
 
   jQuery(function($) {
-    var inp;
+    var caption, inp;
+    caption = $('.main > .caption');
     inp = $('#report-date').DatePicker({
       format: 'b d, Y',
       mode: 'range',
@@ -10,13 +11,14 @@
       calendars: 2,
       onChange: function(formated, dates) {
         inp.val(formated.join(' - '));
-        $('.main .with-date .date').html(formated.join(' - '));
+        caption.find('.date').html(formated.join(' - '));
+        caption.addClass('with-date');
         $('#date_from').val(inp.DatePickerFormatDate(dates[0], 'Y-m-d 00:00:00'));
         return $('#date_to').val(inp.DatePickerFormatDate(dates[1], 'Y-m-d 00:00:00'));
       }
     });
     return $('#about-form input[name=name]').change(function() {
-      return $('.main .with-date h1').html(this.value);
+      return caption.find('h1').html(this.value);
     });
   });
 
