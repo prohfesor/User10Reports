@@ -28,6 +28,16 @@
         }
       }
     });
+    liTpl.find('input').keydown(function(e) {
+      var parent;
+      if (e.keyCode === 13) {
+        parent = $(this).closest('li');
+        if (parent.next().length) {
+          parent.next().find('input').focus();
+        }
+        return false;
+      }
+    });
     list.append(liTpl.clone(true));
     $('#list-form input[name=list_type]').change(function() {
       list.removeClass('square digit').addClass(this.value);
