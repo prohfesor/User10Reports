@@ -9,8 +9,8 @@
 
     <tr>
         <td colspan="3">
-            <div style="border: 1px solid #F2F2F2; background: #FFF; height: 58px; padding: 22px 0 0 22px;">{$report->name}<span style="display: block; color: #999; padding: 3px 0 0; font-size: 10px;">{$report->date_from|date_format:"%b, %e, %Y"}
-                - {$report->date_to|date_format:"%b, %e, %Y"}</span></div>
+            <div style="border: 1px solid #F2F2F2; background: #FFF; height: 58px; padding: 22px 0 0 22px;">{$report->name}<span style="display: block; color: #999; padding: 3px 0 0; font-size: 10px;">{$report->date_from|date_format:"%b. %e, %Y"}
+                - {$report->date_to|date_format:"%b. %e, %Y"}</span></div>
         </td>
     </tr>
     <tr>
