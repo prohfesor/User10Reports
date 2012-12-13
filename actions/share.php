@@ -15,7 +15,7 @@ $mailer = new flyMail();
 $mailer->type = "html";
 $mailer->from = $report->user->email;
 $mailer->replyTo = $report->user->email;
-$subject = $report->name . " (" . date("%b, %e, %Y", $report->date_from) . " - " . date("%b, %e, %Y", $report->date_to) . ")";
+$subject = $report->name . " (" . date("b, e, Y", strtotime($report->date_from)) . " - " . date("b, e, Y", strtotime($report->date_to)) . ")";
 $smarty->assign("report", $report);
 $body = $smarty->fetch('mail.tpl');
 
