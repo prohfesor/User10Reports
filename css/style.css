@@ -406,6 +406,8 @@ h1, .reports-list .report .name {
   border: 1px solid #F2F2F2;
   border-right: 0;
   padding: 4px 0;
+  
+  height: 31px;
 }
 .sidebar .side-caption h2 {
   border-right: 1px solid #BCBCBC;
