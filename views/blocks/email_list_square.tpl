@@ -1,4 +1,4 @@
-<div style="width: 180px; height: 169px; padding: 31px 0 0 20px; background: #F2F2F2;" title="{$block->data['source']}">
+<div style="width: 180px; height: 169px; padding: 31px 0 0 20px; background: #F2F2F2;" width="200" height="200" title="{$block->data['source']}">
     <span style="font-size: 10px; color: #999; text-transform: uppercase;">{$block->data['name']}</span>
     <ul style="padding: 0; margin: 0;">
     {if !empty($block->data['line0'])}<li><span>{$block->data['line0']}</span></li>{/if}
