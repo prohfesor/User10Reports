@@ -971,3 +971,19 @@ h1, .reports-list .report .name {
 /*----------------------------------------------------------------------------------*/
 /*------------------------------------> Sidebar <-----------------------------------*/
 /*----------------------------------------------------------------------------------*/
+
+.tipsy.widget-hint {
+    position: relative;
+    top: -41px;
+    display: none;
+    float: right;
+    opacity: 0.8;
+}
+
+li:hover .tipsy.widget-hint {
+    display: block;
+}
+
+li:hover .tipsy.widget-hint.empty {
+    display: none;
+}

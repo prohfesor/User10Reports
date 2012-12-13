@@ -392,7 +392,7 @@
 
     <div id="editor-wrap">
         <ul class="edit-blocks" id="editor">
-            <li id="add-widget" data-row="1" data-col="1" data-sizex="1" data-sizey="1">
+            <li id="add-widget">
                 <table><tr><td>
                     <span class="add"></span>
                 </td></tr></table>
@@ -420,6 +420,10 @@
             <span class="block-caption">Behind</span>
             <span class="area">Project schedule</span>
         </td></tr></table>
+        <div class="tipsy tipsy-n widget-hint">
+            <div class="tipsy-arrow tipsy-arrow-n"></div>
+            <div class="tipsy-inner"></div>
+        </div>
     </li>
 </script>
 <script type="text/html" id="image-tpl">
@@ -437,6 +441,10 @@
                 <li><span>Direct</span></li>
             </ul>
         </td></tr></table>
+        <div class="tipsy tipsy-n widget-hint">
+            <div class="tipsy-arrow tipsy-arrow-n"></div>
+            <div class="tipsy-inner"></div>
+        </div>
     </li>
 </script>
 <script type="text/html" id="quote-tpl">
@@ -453,6 +461,10 @@
             <span class="block-caption">Behind</span>
             <span class="area">Project schedule</span>
         </td></tr></table>
+        <div class="tipsy tipsy-n widget-hint">
+            <div class="tipsy-arrow tipsy-arrow-n"></div>
+            <div class="tipsy-inner"></div>
+        </div>
     </li>
 </script>
 

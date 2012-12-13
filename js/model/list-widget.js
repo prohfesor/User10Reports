@@ -49,13 +49,22 @@
         '.area': {
           html: '@name'
         },
+        '.tipsy-inner': {
+          html: '@source'
+        },
+        '.widget-hint': {
+          cssClass: {
+            'empty': {
+              '@source': function(text) {
+                return $.trim(text).length === 0;
+              }
+            }
+          }
+        },
         'ul': {
           onModel: {
             '@list_type': function(ul, type) {
               return ul.removeClass('square digit').addClass(type);
-            },
-            '@source': function(node, text) {
-              return node.attr('title', text).tipsy();
             }
           },
           each: {
