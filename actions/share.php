@@ -13,8 +13,9 @@ if(!flyValidate::isEmail($email)){
 
 $mailer = new flyMail();
 $mailer->type = "html";
-
-$subject = "Likely Reports";
+$mailer->from = $report->user->email;
+$mailer->replyTo = $report->user->email;
+$subject = $report->name . " (" . date("%b, %e, %Y", $report->date_from) . " - " . date("%b, %e, %Y", $report->date_to) . ")";
 $smarty->assign("report", $report);
 $body = $smarty->fetch('mail.tpl');
 

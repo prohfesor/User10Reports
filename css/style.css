@@ -317,10 +317,20 @@ h1, .reports-list .report .name {
 
 .edit-blocks .with-image {
     background-repeat: no-repeat;
+    position: relative;
 }
 .edit-blocks .with-image p {
   color: #FFF;
-  background-repeat: no-repeat;
+  background: rgba(0,0,0, 0.75);
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  padding: 8px 0 10px;
+}
+.edit-blocks .with-quote p {
+  font-size: 15px;
+  font-style: italic;
+  font-weight: bold;
 }
 .edit-blocks .block-caption {
   font-size: 37px;
@@ -396,6 +406,8 @@ h1, .reports-list .report .name {
   border: 1px solid #F2F2F2;
   border-right: 0;
   padding: 4px 0;
+  
+  height: 31px;
 }
 .sidebar .side-caption h2 {
   border-right: 1px solid #BCBCBC;
@@ -559,52 +571,7 @@ h1, .reports-list .report .name {
   background: url(../img/plus-blk.png) 12px 12px no-repeat;
   cursor: pointer;
 }
-.side-block .form-block .date {
-  position: relative;
-}
-.side-block .date:hover .calendar-hint {
-  display: block;
-}
-.side-block .calendar-hint {
-  display: none;
-  position: absolute;
-  top: 40px;
-  right: -100px;
-  background: #000;
-  text-align: center;
-  min-width: 240px;
-  padding: 27px 0 20px;
-}
-.side-block .calendar-hint span {
-  display: inline-block;
-  padding: 7px;
-  color: #FFF;
-  font-size: 11px;
-}
-.side-block .calendar-hint .month {
-  text-transform: uppercase;
-  font-weight: 600;
-}
-.side-block .calendar-hint .unactive {
-  color: #999;
-}
-.side-block .calendar-hint .selected {
-  background: #0C9;
-}
-.side-block .calendar-hint .arrow {
-  position: absolute;
-  width: 0;
-  height: 0;
-  line-height: 0;
-  border: 7px solid #000;
-  top: -7px;
-  left: 50%;
-  margin-left: -7px;
-  border-top: none;
-  border-left-color: transparent;
-  border-right-color: transparent;
-  padding: 0;
-}
+
 .side-block .form-block .with-icon .icon {
   display: block;
   width: 40px;

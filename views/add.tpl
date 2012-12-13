@@ -111,14 +111,6 @@
                 <input type="text" class="calendar" id="report-date" readonly/>
                 <input type="hidden" name="date_from" id="date_from"/>
                 <input type="hidden" name="date_to" id="date_to"/>
-                
-                <div class="calendar-hint">
-                    <span class="arrow"></span>
-                    <p><span class="month">Month 2012</span></p>
-                    <p><span class="unactive">Dates not in this month</span></p>
-                    <p><span class="not-selected">Unselected dates in this month</span></p>
-                    <p><span class="selected">Selected dates in this month</span></p>
-                </div>
             </div>
 
             <label>Created by:</label>
@@ -456,7 +448,7 @@
     </li>
 </script>
 <script type="text/html" id="quote-tpl">
-    <li class="widget">
+    <li class="widget with-quote">
         <table><tr><td>
             <p>some text</p>
             <span class="area">John Doe, Beta tester</span>
