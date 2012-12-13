@@ -35,7 +35,7 @@
         {/section}
     </tr>
     {/if}
-    {if count($report->blocks)>7}
+    {if count($report->blocks)>6}
     <tr>
         {section name=k start=6 loop=9}
             <td>
@@ -46,6 +46,18 @@
             </td>
         {/section}
     </tr>
+    {/if}
+    {if count($report->blocks)>9}
+        <tr>
+            {section name=k start=9 loop=12}
+                <td>
+                    {assign var="block" value=$report->blocks[$smarty.section.k.index]}
+                    {if (!empty($block->data) AND !empty($block->type))}
+                {include file="blocks/email_`$block->type`.tpl" block=$block}
+                {/if}
+                </td>
+            {/section}
+        </tr>
     {/if}
 </table>
 
