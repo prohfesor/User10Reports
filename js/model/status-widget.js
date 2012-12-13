@@ -72,10 +72,17 @@
           html: '@title'
         },
         '.area': {
-          html: '@name',
-          onModel: {
-            '@source': function(node, text) {
-              return node.attr('title', text).tipsy();
+          html: '@name'
+        },
+        '.tipsy-inner': {
+          html: '@source'
+        },
+        '.widget-hint': {
+          cssClass: {
+            'empty': {
+              '@source': function(text) {
+                return $.trim(text).length === 0;
+              }
             }
           }
         }

@@ -31,13 +31,15 @@
         if (this.type === 'radio' && this.checked === false) {
           return null;
         }
-        if (this.name.length > 0 && this.value.length > 0) {
+        if (this.name.length > 0) {
           if (this.name.indexOf('[]') > 0) {
-            name = this.name.replace('[]', '');
-            if (name in data) {
-              return data[name].push(this.value);
-            } else {
-              return data[name] = [this.value];
+            if (this.value.length > 0) {
+              name = this.name.replace('[]', '');
+              if (name in data) {
+                return data[name].push(this.value);
+              } else {
+                return data[name] = [this.value];
+              }
             }
           } else {
             return data[this.name] = this.value;
@@ -95,6 +97,9 @@
     });
     $('#forms .delete-data').click(function() {
       var widget;
+      if (confirm('Are you sure?') === false) {
+        return null;
+      }
       widget = $(this).closest('.side-block').getFormModel();
       if (widget) {
         widget.$node.remove();
@@ -105,12 +110,18 @@
     $('.side-block li').has(':radio').click(function() {
       return $(this).find(':radio').prop('checked', true).trigger('change');
     });
-    return $('#forms form').has('.chars').find('textarea').keyup(function() {
+    $('#forms form').has('.chars').find('textarea').keyup(function() {
       var inp;
       inp = $(this).closest('form').find('.chars span');
       inp.html(inp.data('max') - this.value.length);
-      inp.parent().toggleClass('red', inp.data('max') - this.value.length === 0);
-      return null;
+      return inp.parent().toggleClass('red', inp.data('max') - this.value.length === 0);
+    });
+    return $('body').on('mouseover', 'li.widget', function() {
+      var hint;
+      hint = $(this).find('.widget-hint');
+      if (hint.length) {
+        return hint.css('right', (200 - hint.innerWidth()) / 2 + 'px');
+      }
     });
   });
 
