@@ -44,7 +44,7 @@
             }
           }
         },
-        'p': {
+        'span.text': {
           html: '@quote'
         },
         '.area': {
