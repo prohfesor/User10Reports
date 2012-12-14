@@ -59,8 +59,10 @@
 
 
     <div class="caption with-date">
+        <!--
         <a href="#" class="delete-btn">Delete</a>
         <a href="#" class="edit-btn">Edit</a>
+        -->
         <h1>{$report->name}</h1>
         <span class="date">{$report->date_from|date_format:"%b. %e, %Y"}
             - {$report->date_to|date_format:"%b. %e, %Y"}</span>
