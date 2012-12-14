@@ -102,7 +102,7 @@
             <label>Report Name:</label>
 
             <div class="input-block">
-                <input type="text" name="name"/>
+                <input type="text" name="name" placeholder="Social Media Report" />
             </div>
 
             <label>Reporting for date range:</label>
@@ -139,7 +139,7 @@
 
             <label>Data source(s):</label>
             <div class="input-block">
-                <input type="text" name="source" placeholder="Optional" />
+                <input type="text" name="source" />
             </div>
 
             <button class="btn-green">Save and Add Data</button>
@@ -174,7 +174,7 @@
             <label>Data source(s):</label>
 
             <div class="input-block">
-                <input type="text" name="source" placeholder="Optional"/>
+                <input type="text" name="source" />
             </div>
             -->
 
@@ -224,7 +224,7 @@
             <label>Data source(s):</label>
 
             <div class="input-block">
-                <input type="text" name="source" placeholder="Optional"/>
+                <input type="text" name="source" />
             </div>
 
             <button class="btn-green">Save and Add Data</button>
@@ -307,7 +307,7 @@
 
             <label>Data source(s):</label>
             <div class="input-block">
-                <input type="text" name="source" placeholder="Optional"/>
+                <input type="text" name="source" />
             </div>
 
             <button class="btn-green">Save and Add Data</button>
