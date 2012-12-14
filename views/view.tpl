@@ -9,7 +9,7 @@
         <div class="side-caption"><h2>Share</h2></div>
         <div class="form-block side-list">
             <div class="add-block">
-                <form action="/share/" method="post">
+                <form id="form-share" action="/share/" method="post">
                     <div class="input-block with-icon add-mail">
                             <input type="submit" class="icon" value="" />
                             <input type="hidden" name="id" value="{$report->id}" />

@@ -1,15 +1,28 @@
 <?php
 
 $email = $env->get('email');
+$email = trim($email);
 $report = Report::find( $env->getInt('id') );
 
+$result = new stdClass();
+
 if(!$report){
-    $env->redirect("/");
+    $result->status = "Error";
+    $result->content= "Oops, wrong report id.";
+    die( json_encode($result) );
 }
 
 if(!flyValidate::isEmail($email)){
-    $env->redirect("/view/{$report->id}/");
+    $result->status = "Error";
+    $result->content= "Oops, email incorrect.";
+    die( json_encode($result) );
 }
+
+//if(Share::findByEmail($report->id, $email)){
+//    $result->status = "Error";
+//    $result->content= "Oops, this email already shared.";
+//    die( json_encode($result) );
+//}
 
 $mailer = new flyMail();
 $mailer->type = "html";
@@ -23,6 +36,11 @@ $sent = $mailer->send( $email, $subject, $body );
 
 if($sent){
     Share::addShare( $report->id , $email );
+    $result->status = "Success";
+    $result->content= $email;
+} else {
+    $result->status = "Error";
+    $result->content= "Oops, this email already shared.";
 }
 
-$env->redirect("/view/{$report->id}/");
+die( json_encode($result) );
