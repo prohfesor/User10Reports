@@ -326,6 +326,8 @@ h1, .reports-list .report .name {
   left: 0;
   bottom: 0;
   padding: 8px 0 10px;
+  width: 100%;
+  font-size: 11px;
 }
 .edit-blocks .with-quote p {
   font-size: 15px;

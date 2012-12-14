@@ -92,7 +92,7 @@
       } else {
         addWidget(className, data);
       }
-      $this.clearForm();
+      $('#types-form').showForm();
       return false;
     });
     $('#forms .delete-data').click(function() {

@@ -102,7 +102,7 @@
             <label>Report Name:</label>
 
             <div class="input-block">
-                <input type="text" name="name"/>
+                <input type="text" name="name" placeholder="Social Media Report" />
             </div>
 
             <label>Reporting for date range:</label>
@@ -139,7 +139,7 @@
 
             <label>Data source(s):</label>
             <div class="input-block">
-                <input type="text" name="source" placeholder="Optional" />
+                <input type="text" name="source" />
             </div>
 
             <button class="btn-green">Save and Add Data</button>
@@ -174,7 +174,7 @@
             <label>Data source(s):</label>
 
             <div class="input-block">
-                <input type="text" name="source" placeholder="Optional"/>
+                <input type="text" name="source" />
             </div>
             -->
 
@@ -224,7 +224,7 @@
             <label>Data source(s):</label>
 
             <div class="input-block">
-                <input type="text" name="source" placeholder="Optional"/>
+                <input type="text" name="source" />
             </div>
 
             <button class="btn-green">Save and Add Data</button>
@@ -244,7 +244,7 @@
                 <label>Quote:</label>
             </div>
             <div class="input-block">
-                <textarea name="quote" maxlength="140" placeholder='"What somebody said or wrote..."'></textarea>
+                <textarea name="quote" maxlength="140" placeholder='What somebody said or wrote...'></textarea>
             </div>
 
             <label>Quote source:</label>
@@ -307,7 +307,7 @@
 
             <label>Data source(s):</label>
             <div class="input-block">
-                <input type="text" name="source" placeholder="Optional"/>
+                <input type="text" name="source" />
             </div>
 
             <button class="btn-green">Save and Add Data</button>
@@ -450,8 +450,8 @@
 <script type="text/html" id="quote-tpl">
     <li class="widget with-quote">
         <table><tr><td>
-            <p>some text</p>
-            <span class="area">John Doe, Beta tester</span>
+            <p><span class="quote">"</span><span class="text"></span><span class="quote">"</span></p>
+            <span class="area"></span>
         </td></tr></table>
     </li>
 </script>
