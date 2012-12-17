@@ -5,7 +5,7 @@
 <div class="sidebar">
 
 <div class="forms-wrap">
-    <div class="side-block" style="display: none">
+    <div class="side-block">
         <div class="side-caption"><h2>Share</h2></div>
         <div class="form-block side-list">
             <div class="add-block">
@@ -49,7 +49,7 @@
 
 <ul class="buttons-block">
     <li class="first switch active"><a href="#sidebar"></a></li>
-    <li class="button share"><a href="#sidebar">Share</a></li>
+    <li class="button share active"><a href="#sidebar">Share</a></li>
 </ul>
 
 </div> <!-- /Sidebar -->
