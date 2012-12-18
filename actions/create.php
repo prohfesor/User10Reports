@@ -7,11 +7,11 @@ $result = new stdClass();
 if(!$oReport || empty($oReport->name) || empty($oReport->email) || !flyValidate::isEmail($oReport->email))
 {
     $result->status = "Error";
-    $result->content= "Please give your report a name and fill correct email";
+    $result->content= "Oops, it looks like you need to tell us more about your report before publishing.";
 } else {
     $r = Report::create($oReport);
     $result->status = "Success";
-    $result->content = "Created!";
+    $result->content = "Your report has been published. Share it with others.";
     $result->object = $r;
 }
 

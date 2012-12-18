@@ -5,11 +5,11 @@
 <div class="sidebar">
 
 <div class="forms-wrap">
-    <div class="side-block" style="display: none">
+    <div class="side-block">
         <div class="side-caption"><h2>Share</h2></div>
         <div class="form-block side-list">
             <div class="add-block">
-                <form action="/share/" method="post">
+                <form id="form-share" action="/share/" method="post">
                     <div class="input-block with-icon add-mail">
                             <input type="submit" class="icon" value="" />
                             <input type="hidden" name="id" value="{$report->id}" />
@@ -49,7 +49,7 @@
 
 <ul class="buttons-block">
     <li class="first switch active"><a href="#sidebar"></a></li>
-    <li class="button share"><a href="#sidebar">Share</a></li>
+    <li class="button share active"><a href="#sidebar">Share</a></li>
 </ul>
 
 </div> <!-- /Sidebar -->
@@ -59,8 +59,10 @@
 
 
     <div class="caption with-date">
-        <a href="#" class="delete-btn">Delete</a>
-        <a href="#" class="edit-btn">Edit</a>
+
+        <a href="/delete/{$report->id}/" class="delete-btn">Delete</a>
+        <a href="/edit/?id={$report->id}" class="edit-btn">Edit</a>
+
         <h1>{$report->name}</h1>
         <span class="date">{$report->date_from|date_format:"%b. %e, %Y"}
             - {$report->date_to|date_format:"%b. %e, %Y"}</span>

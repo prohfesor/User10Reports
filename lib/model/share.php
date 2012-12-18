@@ -18,6 +18,13 @@ class Share
         return $result;
     }
 
+    public static function findByEmail($id, $email)
+    {
+        $db = flyDb::getInstance();
+        $q = "SELECT * FROM `report_share` WHERE report_id=".(int)$id." AND email=".flySqlUtil::prepareString($email);
+        $result = $db->fetch_row($q);
+        return $result;
+    }
 
     public static function getReport($id)
     {

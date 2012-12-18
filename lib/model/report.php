@@ -108,4 +108,11 @@ class Report
         return self::find($i);
     }
 
+
+    public static function delete($id){
+        $db = flyDb::getInstance();
+        $q = "DELETE FROM `report` WHERE id=".(int)$id;
+        $db->exec($q);
+    }
+
 }
