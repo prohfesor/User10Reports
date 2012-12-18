@@ -1,3 +1,3 @@
 jQuery('a.delete-btn').click(function(){
-    return confirm("DELETE this report permanently. Are you sure?");
+    return confirm("Are you sure you want to delete this report permanently?");
 });

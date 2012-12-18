@@ -61,7 +61,7 @@
     <div class="caption with-date">
 
         <a href="/delete/{$report->id}/" class="delete-btn">Delete</a>
-        <a href="/edit/?id={$report->id}" class="edit-btn">Edit</a>
+        <a href="/edit/{$report->id}/" class="edit-btn">Edit</a>
 
         <h1>{$report->name}</h1>
         <span class="date">{$report->date_from|date_format:"%b. %e, %Y"}

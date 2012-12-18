@@ -1,6 +1,6 @@
 <?php
 
-$report = Report::find( $env->get('id') );
+$report = Report::find( $action2 );
 if(!$report){
     $env->redirect('/');
 }
