@@ -1,11 +1,11 @@
 class window.QuoteWidget extends Model
     data:
-        id:         0
-        report_id:  0
-        order:      0
-        type:       'quote'
-        source:     ''
-        quote:      ''
+        id:        0
+        report_id: 0
+        position:  0
+        type:      'quote'
+        source:    ''
+        quote:     ''
 
 jQuery ($) ->
     class window.QuoteView extends View

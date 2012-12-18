@@ -2,7 +2,7 @@ class window.CustomWidget extends Model
     data:
         id:        0
         report_id: 0
-        order:     0
+        position:  0
         type:      'custom'
         name:      ''
         data:      ''

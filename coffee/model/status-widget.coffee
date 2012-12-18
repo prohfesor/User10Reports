@@ -1,13 +1,13 @@
 class window.StatusWidget extends Model
     data:
-        id:         0
-        report_id:  0
-        order:      0
-        type:       'status'
-        title:      ''
-        name:       ''
-        status:     ''
-        source:     ''
+        id:        0
+        report_id: 0
+        position:  0
+        type:      'status'
+        title:     ''
+        name:      ''
+        status:    ''
+        source:    ''
 
 jQuery ($) ->
 

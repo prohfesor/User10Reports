@@ -2,7 +2,7 @@ class window.ListWidget extends Model
     data:
         id:         0
         report_id:  0
-        order:      0
+        position:   0
         type:       'list'
         name:       ''
         list:       []

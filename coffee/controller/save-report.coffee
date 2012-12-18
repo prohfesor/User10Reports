@@ -6,9 +6,13 @@ jQuery ($) ->
         $('#editor > .widget').each ->
             data.blocks.push($(this).data('model').get())
 
+        match = location.href.match(/\/edit\/(\d+)/)
+        if match
+            data.id = match[1]
+
         form.find('button').prop('disabled', true)
         $.ajax
-            url:  '/create/'
+            url:  if match then '/update/' + match[1] else '/create/'
             data: {report: JSON.stringify(data)}
             type: 'POST'
             dataType: 'JSON'
