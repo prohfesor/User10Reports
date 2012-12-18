@@ -2,6 +2,7 @@ jQuery(document).ready(function(){
     jQuery("li.switch a, li.button.share a").click(function(){
         jQuery(".side-block").toggle();
         jQuery(".buttons-block .share").toggleClass("active");
+        jQuery(".content .wrap").toggleClass("centered-body");
         return false;
     });
 });
