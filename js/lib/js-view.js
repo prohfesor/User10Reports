@@ -73,6 +73,26 @@
         }
         return this;
       },
+        style: function(ops, node, model, data) {
+            var event, func, name, styleOps, _fn, _ref;
+            for (name in ops) {
+                styleOps = ops[name];
+                _ref = checkOps(styleOps);
+                _fn = function(name, func) {
+                    return model.on(event, function() {
+                        var rest;
+                        rest = 1 <= arguments.length ? __slice.call(arguments, 0) : [];
+                        rest.push(node, model);
+                        return node.css(name, func.apply(data, rest));
+                    });
+                };
+                for (event in _ref) {
+                    func = _ref[event];
+                    _fn(name, func);
+                }
+            }
+            return this;
+        },
       prop: function(ops, node, model, data) {
         var event, func, name, propOps, _fn, _ref;
         for (name in ops) {
