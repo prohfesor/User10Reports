@@ -1,14 +1,13 @@
 class window.ListWidget extends Model
     data:
-        id: 0
-        report_id: 0
-        type: 'list'
-        row: 1
-        col: 1
-        name: ''
-        list: []
-        list_type: 'bullet'
-        source: ''
+        id:         0
+        report_id:  0
+        position:   0
+        type:       'list'
+        name:       ''
+        list:       []
+        list_type:  'bullet'
+        source:     ''
 
 jQuery ($) ->
 
@@ -18,7 +17,6 @@ jQuery ($) ->
             '':
                 on: 'click': ->
                     $('#list-form')
-                        .setFormData(this.get())
                         .setFormModel(this)
                         .showForm()
 

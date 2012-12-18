@@ -1,13 +1,12 @@
 class window.CustomWidget extends Model
     data:
-        id: 0
+        id:        0
         report_id: 0
-        type: 'custom'
-        row: 1
-        col: 1
-        name:  ''
-        data:   ''
-        source: ''
+        position:  0
+        type:      'custom'
+        name:      ''
+        data:      ''
+        source:    ''
 
 jQuery ($) ->
 
@@ -15,12 +14,10 @@ jQuery ($) ->
         html: $('#custom-tpl').html()
         template:
             '':
-                on:
-                    'click': ->
-                        $('#custom-form')
-                            .setFormData(this.get())
-                            .setFormModel(this)
-                            .showForm()
+                on: 'click': ->
+                    $('#custom-form')
+                        .setFormModel(this)
+                        .showForm()
 
             '.block-caption':
                 html: '@data'

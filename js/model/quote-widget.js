@@ -14,9 +14,8 @@
     QuoteWidget.prototype.data = {
       id: 0,
       report_id: 0,
+      position: 0,
       type: 'quote',
-      row: 1,
-      col: 1,
       source: '',
       quote: ''
     };
@@ -40,11 +39,11 @@
         '': {
           on: {
             'click': function() {
-              return $('#quote-form').setFormData(this.get()).setFormModel(this).showForm();
+              return $('#quote-form').setFormModel(this).showForm();
             }
           }
         },
-        'span.text': {
+        'p': {
           html: '@quote'
         },
         '.area': {

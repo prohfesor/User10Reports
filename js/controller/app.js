@@ -2,10 +2,15 @@
 (function() {
 
   jQuery(function($) {
-    $("#editor").sortable({
-      items: "> li.widget"
+    var match;
+    $("#editor").disableSelection().sortable({
+      items: "> li.widget",
+      update: function(e, ui) {
+        return $("#editor > li.widget").each(function(i) {
+          return $(this).data('model').setPosition(i);
+        });
+      }
     });
-    $("#editor").disableSelection();
     $('#about-form').showForm();
     window.widgetMap = {
       custom: {
@@ -32,14 +37,33 @@
     $('*[title]').tipsy({
       gravity: 'n'
     });
-    addWidget('custom', {
-      data: 'Click',
-      name: 'to edit data block'
-    });
-    return addWidget('custom', {
-      data: 'Drag',
-      name: 'block to re-arrange'
-    });
+    match = location.href.match(/\/edit\/(\d+)/);
+    if (match) {
+      return $.getJSON('/object/' + match[1] + '/', function(report) {
+        var block, data, _i, _len, _ref;
+        $('#about-form input[name=name]').val(report.name).change();
+        $('#about-form input[name=email]').val(report.user.email).change();
+        $('#report-date').trigger('set-date', [new Date(report.date_from), new Date(report.date_to)]);
+        _ref = report.blocks;
+        for (_i = 0, _len = _ref.length; _i < _len; _i++) {
+          block = _ref[_i];
+          data = block.data;
+          delete block.data;
+          $.extend(data, block);
+          addWidget(block.type, data);
+        }
+        return null;
+      });
+    } else {
+      addWidget('custom', {
+        data: 'Click',
+        name: 'to edit data block'
+      });
+      return addWidget('custom', {
+        data: 'Drag',
+        name: 'block to re-arrange'
+      });
+    }
   });
 
 }).call(this);

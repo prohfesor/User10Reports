@@ -14,9 +14,8 @@
     ImageWidget.prototype.data = {
       id: 0,
       report_id: 0,
+      position: 0,
       type: 'image',
-      row: 1,
-      col: 1,
       caption: '',
       picture: '',
       source: ''
@@ -41,12 +40,14 @@
         '': {
           on: {
             'click': function() {
-              return $('#image-form').setFormData(this.get()).setFormModel(this).showForm();
+              return $('#image-form').setFormModel(this).showForm();
             }
           },
-          onModel: {
-            '@picture': function(li, url) {
-              return li.css('background-image', "url(" + url + ")");
+          style: {
+            'background-image': {
+              '@picture': function(url) {
+                return "url(" + url + ")";
+              }
             }
           }
         },

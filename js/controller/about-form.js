@@ -10,15 +10,20 @@
       date: new Date(),
       calendars: 2,
       onChange: function(formated, dates) {
-        inp.val(formated.join(' - '));
-        caption.find('.date').html(formated.join(' - '));
-        caption.addClass('with-date');
-        $('#date_from').val(inp.DatePickerFormatDate(dates[0], 'Y-m-d 00:00:00'));
-        return $('#date_to').val(inp.DatePickerFormatDate(dates[1], 'Y-m-d 00:00:00'));
+        return inp.trigger('set-date', [dates[0], dates[1]]);
       }
     });
-    return $('#about-form input[name=name]').change(function() {
+    $('#about-form input[name=name]').change(function() {
       return caption.find('h1').html(this.value);
+    });
+    return inp.on('set-date', function(e, from, to) {
+      var formated;
+      formated = inp.DatePickerFormatDate(from, 'b d, Y - ') + inp.DatePickerFormatDate(to, 'b d, Y');
+      inp.val(formated);
+      caption.find('.date').html(formated);
+      caption.addClass('with-date');
+      $('#date_from').val(inp.DatePickerFormatDate(from, 'Y-m-d 00:00:00'));
+      return $('#date_to').val(inp.DatePickerFormatDate(to, 'Y-m-d 00:00:00'));
     });
   });
 

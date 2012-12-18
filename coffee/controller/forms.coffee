@@ -36,6 +36,7 @@ jQuery ($) ->
         return data
 
     $.fn.setFormModel = (model) ->
+        this.setFormData(model.get()) if model instanceof Model
         form = this.find('form')
         form = if form.length then form else this
         form.data('model', model)

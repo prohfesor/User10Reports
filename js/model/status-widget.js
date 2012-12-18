@@ -14,9 +14,8 @@
     StatusWidget.prototype.data = {
       id: 0,
       report_id: 0,
+      position: 0,
       type: 'status',
-      row: 1,
-      col: 1,
       title: '',
       name: '',
       status: '',
@@ -42,7 +41,7 @@
         '': {
           on: {
             'click': function() {
-              return $('#status-form').setFormData(this.get()).setFormModel(this).showForm();
+              return $('#status-form').setFormModel(this).showForm();
             }
           },
           cssClass: {

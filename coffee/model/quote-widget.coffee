@@ -1,26 +1,23 @@
 class window.QuoteWidget extends Model
     data:
-        id: 0
+        id:        0
         report_id: 0
-        type: 'quote'
-        row: 1
-        col: 1
-        source: ''
-        quote:  ''
+        position:  0
+        type:      'quote'
+        source:    ''
+        quote:     ''
 
 jQuery ($) ->
-
     class window.QuoteView extends View
         html: $('#quote-tpl').html()
         template:
             '':
                 on: 'click': ->
                     $('#quote-form')
-                        .setFormData(this.get())
                         .setFormModel(this)
                         .showForm()
 
-            'span.text':
+            'p':
                 html: '@quote'
 
             '.area':

@@ -3,16 +3,20 @@
 
   jQuery(function($) {
     return $('#publish').click(function() {
-      var data, form;
+      var data, form, match;
       form = $('#about-form form');
       data = form.getFormData();
       data.blocks = [];
       $('#editor > .widget').each(function() {
         return data.blocks.push($(this).data('model').get());
       });
+      match = location.href.match(/\/edit\/(\d+)/);
+      if (match) {
+        data.id = match[1];
+      }
       form.find('button').prop('disabled', true);
       $.ajax({
-        url: '/create/',
+        url: match ? '/update/' + match[1] + '/' : '/create/',
         data: {
           report: JSON.stringify(data)
         },

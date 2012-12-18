@@ -244,7 +244,7 @@
                 <label>Quote:</label>
             </div>
             <div class="input-block">
-                <textarea name="quote" maxlength="140" placeholder='What somebody said or wrote...'></textarea>
+                <textarea name="quote" maxlength="140" placeholder='"What somebody said or wrote..."'></textarea>
             </div>
 
             <label>Quote source:</label>
@@ -450,7 +450,7 @@
 <script type="text/html" id="quote-tpl">
     <li class="widget with-quote">
         <table><tr><td>
-            <p><span class="quote">"</span><span class="text"></span><span class="quote">"</span></p>
+            <p></p>
             <span class="area"></span>
         </td></tr></table>
     </li>

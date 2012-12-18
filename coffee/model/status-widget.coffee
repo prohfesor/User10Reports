@@ -1,14 +1,13 @@
 class window.StatusWidget extends Model
     data:
-        id: 0
+        id:        0
         report_id: 0
-        type: 'status'
-        row: 1
-        col: 1
-        title:  ''
-        name:   ''
-        status: ''
-        source: ''
+        position:  0
+        type:      'status'
+        title:     ''
+        name:      ''
+        status:    ''
+        source:    ''
 
 jQuery ($) ->
 
@@ -18,7 +17,6 @@ jQuery ($) ->
             '':
                 on: 'click': ->
                     $('#status-form')
-                        .setFormData(this.get())
                         .setFormModel(this)
                         .showForm()
 
