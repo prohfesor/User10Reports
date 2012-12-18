@@ -12,7 +12,7 @@ jQuery ($) ->
 
         form.find('button').prop('disabled', true)
         $.ajax
-            url:  if match then '/update/' + match[1] else '/create/'
+            url:  if match then '/update/' + match[1] + '/' else '/create/'
             data: {report: JSON.stringify(data)}
             type: 'POST'
             dataType: 'JSON'

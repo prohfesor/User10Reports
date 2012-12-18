@@ -16,7 +16,7 @@
       }
       form.find('button').prop('disabled', true);
       $.ajax({
-        url: match ? '/update/' + match[1] : '/create/',
+        url: match ? '/update/' + match[1] + '/' : '/create/',
         data: {
           report: JSON.stringify(data)
         },

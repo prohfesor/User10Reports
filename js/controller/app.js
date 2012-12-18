@@ -39,7 +39,7 @@
     });
     match = location.href.match(/\/edit\/(\d+)/);
     if (match) {
-      return $.getJSON('/object/' + match[1], function(report) {
+      return $.getJSON('/object/' + match[1] + '/', function(report) {
         var block, data, _i, _len, _ref;
         $('#about-form input[name=name]').val(report.name).change();
         $('#about-form input[name=email]').val(report.user.email).change();

@@ -32,7 +32,7 @@ jQuery ($) ->
 
     match = location.href.match(/\/edit\/(\d+)/)
     if match
-        $.getJSON '/object/' + match[1], (report) ->
+        $.getJSON '/object/' + match[1] + '/', (report) ->
             $('#about-form input[name=name]').val(report.name).change()
             $('#about-form input[name=email]').val(report.user.email).change()
             $('#report-date').trigger('set-date', [new Date(report.date_from), new Date(report.date_to)])
