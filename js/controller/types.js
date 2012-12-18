@@ -2,14 +2,16 @@
 (function() {
 
   jQuery(function($) {
-    return $('#types-form li').click(function() {
+    $('#types-form li').click(function() {
       var $this, className;
-      $('#toggle-tab').toggleClass('switch close');
-      $('#edit-tab').show().addClass('active');
-      $('#about-tab, #add-widget-tab').hide();
       $this = $(this);
       className = $this.data('class');
       return $('#' + className + '-form').clearForm().showForm();
+    });
+    return $('body').on('click', '#types-form li, #editor .widget', function() {
+      $('#toggle-tab').removeClass('switch').addClass('close');
+      $('#edit-tab').show().addClass('active');
+      return $('#about-tab, #add-widget-tab').hide();
     });
   });
 
