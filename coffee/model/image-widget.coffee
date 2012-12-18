@@ -1,28 +1,25 @@
 class window.ImageWidget extends Model
     data:
-        id: 0
+        id:        0
         report_id: 0
-        type: 'image'
-        row: 1
-        col: 1
-        caption: ''
-        picture: ''
-        source: ''
+        order:     0
+        type:      'image'
+        caption:   ''
+        picture:   ''
+        source:    ''
 
 jQuery ($) ->
-
     class window.ImageView extends View
         html: $('#image-tpl').html()
         template:
             '':
                 on: 'click': ->
                     $('#image-form')
-                        .setFormData(this.get())
                         .setFormModel(this)
                         .showForm()
 
-                onModel: '@picture': (li, url) ->
-                    li.css('background-image', "url(#{url})")
+                style:
+                    'background-image': '@picture': (url) -> "url(#{url})"
 
             'p':
                 html: '@caption'

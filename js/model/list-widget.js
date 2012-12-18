@@ -14,9 +14,8 @@
     ListWidget.prototype.data = {
       id: 0,
       report_id: 0,
+      order: 0,
       type: 'list',
-      row: 1,
-      col: 1,
       name: '',
       list: [],
       list_type: 'bullet',
@@ -42,7 +41,7 @@
         '': {
           on: {
             'click': function() {
-              return $('#list-form').setFormData(this.get()).setFormModel(this).showForm();
+              return $('#list-form').setFormModel(this).showForm();
             }
           }
         },

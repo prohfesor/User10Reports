@@ -1,5 +1,4 @@
 jQuery ($) ->
-
     $('#types-form li').click ->
         $('#toggle-tab').toggleClass('switch close')
         $('#edit-tab').show().addClass('active')

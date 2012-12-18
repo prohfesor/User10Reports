@@ -14,9 +14,8 @@
     CustomWidget.prototype.data = {
       id: 0,
       report_id: 0,
+      order: 0,
       type: 'custom',
-      row: 1,
-      col: 1,
       name: '',
       data: '',
       source: ''
@@ -41,7 +40,7 @@
         '': {
           on: {
             'click': function() {
-              return $('#custom-form').setFormData(this.get()).setFormModel(this).showForm();
+              return $('#custom-form').setFormModel(this).showForm();
             }
           }
         },

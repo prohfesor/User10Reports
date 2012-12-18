@@ -2,10 +2,14 @@
 (function() {
 
   jQuery(function($) {
-    $("#editor").sortable({
-      items: "> li.widget"
+    $("#editor").disableSelection().sortable({
+      items: "> li.widget",
+      update: function(e, ui) {
+        return $("#editor > li.widget").each(function(i) {
+          return $(this).data('model').setOrder(i);
+        });
+      }
     });
-    $("#editor").disableSelection();
     $('#about-form').showForm();
     window.widgetMap = {
       custom: {

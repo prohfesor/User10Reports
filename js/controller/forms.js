@@ -50,6 +50,9 @@
     };
     $.fn.setFormModel = function(model) {
       var form;
+      if (model instanceof Model) {
+        this.setFormData(model.get());
+      }
       form = this.find('form');
       form = form.length ? form : this;
       form.data('model', model);
