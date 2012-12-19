@@ -6,7 +6,6 @@ class window.ImageWidget extends Model
         type:      'image'
         caption:   ''
         picture:   ''
-        source:    ''
 
 jQuery ($) ->
     class window.ImageView extends View
@@ -20,3 +19,5 @@ jQuery ($) ->
 
                 style:
                     'background-image': '@picture': (url) -> "url(#{url})"
+            'p':
+                html: '@caption'

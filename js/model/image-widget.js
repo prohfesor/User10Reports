@@ -17,8 +17,7 @@
       position: 0,
       type: 'image',
       caption: '',
-      picture: '',
-      source: ''
+      picture: ''
     };
 
     return ImageWidget;
@@ -50,6 +49,9 @@
               }
             }
           }
+        },
+        'p': {
+          html: '@caption'
         }
       };
 
