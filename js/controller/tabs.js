@@ -11,7 +11,7 @@
       } else {
         $('#forms').toggle();
         $('.wrap.edit-page').toggleClass('centered-body');
-        return $(this).toggleClass('active');
+        return $this.toggleClass('active');
       }
     });
     $('#about-tab').click(function() {
@@ -20,11 +20,11 @@
       return $('#toggle-tab').addClass('active');
     });
     window.showTypeForm = function() {
+      $('#types-form').showForm();
       $('#toggle-tab').removeClass('close').addClass('switch active');
       $('#about-tab').show().removeClass('active');
       $('#add-widget-tab').show().addClass('active');
       $('#edit-tab').hide();
-      $('#types-form').showForm();
       return $('#forms').show();
     };
     $('#add-widget-tab').click(function() {

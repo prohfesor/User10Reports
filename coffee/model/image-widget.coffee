@@ -20,8 +20,3 @@ jQuery ($) ->
 
                 style:
                     'background-image': '@picture': (url) -> "url(#{url})"
-
-            'p':
-                html: '@caption'
-                onModel: '@source': (node, text) ->
-                    node.attr('title', text).tipsy()

@@ -15,8 +15,8 @@
     <script src="/js/lib/jquery.tipsy.js"></script>
     <script src="/js/lib/datepicker.js"></script>
 
-    <script src="/js/lib/js-model.js"></script>
-    <script src="/js/lib/js-view.js"></script>
+    <script src="https://raw.github.com/redexp/js-model/master/js/js-model.js"></script>
+    <script src="https://raw.github.com/redexp/js-model/master/js/js-view.js"></script>
 
     <script src="/js/model/custom-widget.js"></script>
     <script src="/js/model/image-widget.js"></script>
@@ -169,14 +169,6 @@
             <div class="input-block">
                 <textarea name="caption" maxlength="140" placeholder="Optional"></textarea>
             </div>
-
-            <!--
-            <label>Data source(s):</label>
-
-            <div class="input-block">
-                <input type="text" name="source" />
-            </div>
-            -->
 
             <button class="btn-green">Save and Add Data</button>
 

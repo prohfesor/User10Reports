@@ -2,6 +2,8 @@ jQuery ($) ->
 
     $.fn.showForm = () ->
         $('#forms > .side-block').hide()
+        if $('.wrap.edit-page').hasClass('centered-body')
+            $('#toggle-tab').click()
         this.show()
 
     $.fn.setFormData = (data) ->
@@ -78,7 +80,7 @@ jQuery ($) ->
         else
             addWidget(className, data)
 
-        $('#types-form').showForm()
+        showTypeForm()
 
         return false
 

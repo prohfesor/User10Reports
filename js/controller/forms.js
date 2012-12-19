@@ -4,6 +4,9 @@
   jQuery(function($) {
     $.fn.showForm = function() {
       $('#forms > .side-block').hide();
+      if ($('.wrap.edit-page').hasClass('centered-body')) {
+        $('#toggle-tab').click();
+      }
       return this.show();
     };
     $.fn.setFormData = function(data) {
@@ -95,7 +98,7 @@
       } else {
         addWidget(className, data);
       }
-      $('#types-form').showForm();
+      showTypeForm();
       return false;
     });
     $('#forms .delete-data').click(function() {

@@ -32,11 +32,11 @@ jQuery ($) ->
 
             'ul':
                 onModel:
-                    '@list_type': (ul, type) ->
+                    '@list_type': (type, ul) ->
                         ul.removeClass('square digit').addClass(type)
 
                 each:
-                    dataField: 'list'
+                    field: 'list'
                     template:
                         'span':
                             html: -> this.valueOf()

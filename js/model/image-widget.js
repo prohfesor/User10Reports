@@ -50,14 +50,6 @@
               }
             }
           }
-        },
-        'p': {
-          html: '@caption',
-          onModel: {
-            '@source': function(node, text) {
-              return node.attr('title', text).tipsy();
-            }
-          }
         }
       };
 

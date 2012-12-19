@@ -62,12 +62,12 @@
         },
         'ul': {
           onModel: {
-            '@list_type': function(ul, type) {
+            '@list_type': function(type, ul) {
               return ul.removeClass('square digit').addClass(type);
             }
           },
           each: {
-            dataField: 'list',
+            field: 'list',
             template: {
               'span': {
                 html: function() {
