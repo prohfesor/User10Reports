@@ -26,8 +26,10 @@
 
     <div class="pagination">
         <a href="/add/" class="add"></a>
+        <!--
         <a href="/" class="left"></a>
         <a href="/" class="right"></a>
+        -->
     </div>
 
 
