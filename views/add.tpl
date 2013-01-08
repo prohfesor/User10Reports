@@ -14,9 +14,8 @@
     <script src="/js/lib/jquery.form.js"></script>
     <script src="/js/lib/jquery.tipsy.js"></script>
     <script src="/js/lib/datepicker.js"></script>
-
-    <script src="https://raw.github.com/redexp/js-model/master/js/js-model.js"></script>
-    <script src="https://raw.github.com/redexp/js-model/master/js/js-view.js"></script>
+    <script src="/js/lib/model.js"></script>
+    <script src="/js/lib/view.js"></script>
 
     <script src="/js/model/custom-widget.js"></script>
     <script src="/js/model/image-widget.js"></script>
